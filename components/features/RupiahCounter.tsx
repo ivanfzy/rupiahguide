@@ -178,7 +178,7 @@ const RupiahCounter: React.FC<RupiahCounterProps> = ({ popularRates, lastUpdated
             <Icons.Wallet className="w-5 h-5 text-indigo-500" />
             {t.banknoteBreakdown}
           </h3>
-          <div className="space-y-3">
+          <div className="space-y-2">
             {IDR_BANKNOTES.map(note => (
               <BanknoteControl 
                 key={note.value}

@@ -1,14 +1,12 @@
 // src/config/seo.ts
 
 export const SEO_CONFIG = {
-  defaultTitle: "RupiahGuide - Indonesia Currency Converter & Guide for Tourists",
+  defaultTitle: "RupiahGuide - Indonesia Travel Money Guide",
   titleTemplate: "%s - RupiahGuide",
-  description: "The ultimate currency companion for tourists in Indonesia. Visualize IDR banknotes, calculate cash easily, and get real-time exchange rates to avoid scams.",
+  description: "Visual guide to Indonesian Rupiah banknotes.",
   url: "https://rupiahguide.com", // Ganti dengan domain asli nanti
   siteName: "RupiahGuide",
   twitter: {
-    handle: "@rupiahguide",
-    site: "@rupiahguide",
     cardType: "summary_large_image",
   },
   openGraph: {
@@ -34,15 +32,12 @@ export const SCHEMA_ORG = {
     name: "RupiahGuide",
     url: SEO_CONFIG.url,
     logo: `${SEO_CONFIG.url}/logo.svg`,
-    sameAs: [
-      "https://twitter.com/rupiahguide",
-      "https://instagram.com/rupiahguide"
-    ]
   },
   website: {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "RupiahGuide",
+    alternateName: "Visual guide to Indonesian Rupiah banknotes",
     url: SEO_CONFIG.url,
     potentialAction: {
       "@type": "SearchAction",

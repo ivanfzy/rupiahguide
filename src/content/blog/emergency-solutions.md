@@ -2,6 +2,8 @@
 title: "Emergency Payment Solutions: What to Do When You're Short on Cash or Cards Fail"
 excerpt: "Real strategies for handling payment emergencies including money transfers, alternative card options, and borrowing solutions."
 date: "2026-02-01"
+category: "digital-emergency"
+order: 2
 ---
 
 
@@ -19,7 +21,7 @@ Before discussing emergencies, prevention is far more effective than troubleshoo
 1. Primary debit card (home bank, most accessible)
 2. Secondary debit card (different bank, different home institution if possible)
 3. Credit card (different issuer if possible)
-4. ~Rp2.000.000 in cash split into 2 locations
+4. ~[Rp2.000.000](understanding-rupiah) in cash split into 2 locations
 
 **Why this works:**
 - If one card fails, another has different processing systems (different fraud detection, different networks)
@@ -28,10 +30,10 @@ Before discussing emergencies, prevention is far more effective than troubleshoo
 
 **Implementation:**
 - Primary card: In main wallet, used frequently
-- Secondary card: In hotel safe or money belt, used sparingly
+- Secondary card: In [hotel safe](cash-storage) or money belt, used sparingly
 - Credit card: Separate from debit cards, used only if debit fails
 - Cash 1: Daily wallet
-- Cash 2: Hotel safe (emergency reserve)
+- Cash 2: [Hotel safe](cash-storage) (emergency reserve)
 
 ### Prevention Tactic #2: Notify Your Bank
 
@@ -53,7 +55,7 @@ Before discussing emergencies, prevention is far more effective than troubleshoo
 ### Prevention Tactic #3: Know Your Card Limits
 
 **Before traveling, confirm:**
-- Daily ATM withdrawal limit (often Rp10.000.000–25.000.000)
+- Daily [ATM withdrawal](atm-strategy) limit (often Rp10.000.000–25.000.000)
 - Daily spending limit (card maximum per day)
 - International transaction limits
 
@@ -361,6 +363,6 @@ Now assume all your cards are declined or unavailable. You still have options.
 9. **Keep emergency contact info accessible** – Email to yourself encrypted, or written in secure location
 10. **Your embassy helps, but isn't primary solution** – Western Union and borrowing are faster options
 11. **Selling valuables is last resort** – Only if all other options exhausted
-12. **Cash is ultimate backup** – Carry minimum Rp2.000.000 in emergency reserve at hotel safe
+12. **[Cash](cash-vs-card) is ultimate backup** – Carry minimum [Rp2.000.000](understanding-rupiah) in emergency reserve at [hotel safe](cash-storage)
 
 **The bottom line:** Payment emergencies are preventable through preparation and manageable through real solutions. Indonesia is a major tourist destination; financial help exists. Being short on payment options is solvable within hours or days, not an unsolvable crisis.

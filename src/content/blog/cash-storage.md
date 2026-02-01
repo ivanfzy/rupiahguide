@@ -2,10 +2,12 @@
 title: "Where to Keep Your Cash: Safety Tips from Locals"
 excerpt: "Strategically divide, store, and carry cash to stay safe without disrupting your daily activities."
 date: "2026-02-01"
+category: "atm-cash"
+order: 2
 ---
 
 
-The main risks with cash while traveling aren't just theft from criminals, but also losing your own wallet, miscounting, or getting trapped at an unsafe money changer. The best system minimizes your "maximum loss" if something goes wrong, while remaining practical for daily life.
+The main risks with cash while traveling aren't just theft from criminals, but also losing your own wallet, miscounting, or getting trapped at an [unsafe money changer](avoid-scam). The best system minimizes your "maximum loss" if something goes wrong, while remaining practical for daily life.
 
 This article teaches you the 3-zone system used by local travelers and experienced backpackers across Indonesia.
 
@@ -31,9 +33,9 @@ If your daily wallet is lost or stolen, you lose only 1 day's budget, not a week
 - Total Zone 1: Rp800.000
 
 **Denomination mix in Zone 1:**
-- Rp20.000 and Rp50.000 notes: for regular purchases
-- Rp10.000 and Rp5.000 notes: for tips and small transactions
-- 1–2 Rp100.000 notes: for emergencies or surprise large purchases
+- [Rp20.000 and Rp50.000 notes](understanding-rupiah): for regular purchases
+- [Rp10.000 and Rp5.000 notes](small-change): for parking, temple donations, and small transactions
+- 1–2 [Rp100.000 notes](understanding-rupiah): for emergencies or surprise large purchases
 
 **Location:** The wallet you always carry with you, in a place that's easy to access for daily transactions
 
@@ -54,7 +56,7 @@ If your daily wallet disappears, this backup stash is your safety net—enough t
 - Stored in a hidden pouch or separate compartment
 
 **Denomination mix in backup stash:**
-- Mix of Rp100.000, Rp50.000, and Rp20.000 notes
+- Mix of [Rp100.000, Rp50.000, and Rp20.000 notes](understanding-rupiah)
 - Avoid all same denominations (if a thief gets it, don't hand them one large amount)
 - Aim for flexibility, not convenience
 
@@ -95,10 +97,10 @@ This is your "savings." You should never carry this while moving around—keepin
 
 ## ATM Safety: Your Money Source
 
-Before dividing cash into 3 zones, you need to withdraw it safely. Some crimes like card skimming make ATMs in quiet, poorly-supervised locations riskier.
+Before dividing cash into 3 zones, you need to [withdraw it safely](atm-strategy). Some crimes like card skimming make ATMs in quiet, poorly-supervised locations riskier. See our complete [ATM strategy guide](atm-strategy) for optimal withdrawal patterns.
 
 **Choose safe ATMs:**
-- ATMs inside actual bank branches (not standalone machines in remote areas)
+- [ATMs inside actual bank branches](atm-strategy) (BCA, Mandiri, BNI - not standalone machines in remote areas)
 - ATMs in malls or areas with security and visible CCTV
 - ATMs in busy areas (other people around)
 - Avoid ATMs in dark, quiet, or late-night locations
@@ -202,15 +204,17 @@ Even in low-risk areas, the 3-zone system helps you manage money effectively.
 | Mid-range | Rp800.000 | Rp2.000.000 | Rp7.000.000+ |
 | Luxury | Rp1.500.000 | Rp3.000.000 | Rp10.000.000+ |
 
+*Based on [daily budget estimates](daily-budget) for each travel style*
+
 ## Key Takeaways
 
 1. **Divide cash into 3 strategic zones** – Zone 1 (daily), Zone 2 (backup), Zone 3 (locked reserve)
 2. **Zone 1 is only for today** – Reduce risk by not carrying your whole supply
 3. **Zone 2 hidden and separate** – Money belt, separate pouch, not your main wallet
 4. **Zone 3 always locked or secured** – Don't carry daily; only access when withdrawing
-5. **Choose safe ATMs** – Bank branches, malls, busy areas, daytime, never isolated locations
+5. **[Choose safe ATMs](atm-strategy)** – Bank branches, malls, busy areas, daytime, never isolated locations
 6. **Never display cash** – Count in private, not in public or streets
-7. **Keep small denominations accessible** – Avoids repeatedly opening your "big bills" stash
+7. **Keep [small denominations](small-change) accessible** – Avoids repeatedly opening your "[big bills](understanding-rupiah)" stash
 8. **Reset every evening** – Accounting, reorganizing, preparing for next day
 9. **Lock safes are your best investment** – Use them always at your accommodation
 10. **Keep exchange receipts** – Evidence if there's later discrepancy on rates

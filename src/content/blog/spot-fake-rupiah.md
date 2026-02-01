@@ -2,6 +2,8 @@
 title: "How to Spot Fake Indonesian Rupiah Notes"
 excerpt: "Identifying fake Indonesian rupiah notes is easy. Here are some common signs to look out for."
 date: "2026-02-01"
+category: "foundation"
+order: 3
 ---
 
 Every year, tens of thousands of counterfeit rupiah notes circulate in Indonesia. Fortunately, as a tourist, your risk is relatively low if you know what to look for. Most fakes originate from unofficial money changers and street traders—not authorized exchanges. Learning to spot them takes 2 minutes and can save you from losing money or worse, trying to use counterfeit notes (which is illegal).

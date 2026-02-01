@@ -2,12 +2,14 @@
 title: "Red Flags at Money Changers: When to Walk Away"
 excerpt: "Clear warning signs to identify and exit unsafe money changers before money changes hands."
 date: "2026-02-01"
+category: "exchange-safety"
+order: 2
 ---
 
 
 Many currency exchange scams depend on one critical moment: you choose to stay and complete the transaction because you feel "already committed" or "don't want to be rude." Yet the safest action is often to cancel and walk away before money fully changes hands.
 
-This article teaches you which red flags demand you walk away—and how to exit gracefully without creating problems.
+This article teaches you which [red flags](avoid-scam) demand you walk away—and how to exit gracefully without creating problems. See our guide on [10 common money exchange scams](avoid-scam) for specific scam tactics.
 
 ## The Non-Negotiable Baseline: Licensed Changer
 
@@ -78,9 +80,13 @@ After the operator counts and hands you money, they:
 **Why it's dangerous:**
 Short-changing commonly happens here. They bet you won't recount at the counter, so you'll discover you're short only later (too late to claim).
 
+**Specific scam to watch for—Mixing Denominations:**
+A common tactic in Indonesia is slipping **Rp10,000 bills (purple) into stacks of Rp100,000 bills (red)**. Tourists unfamiliar with the currency often don't notice the color difference immediately. Always check every bill—if you expected Rp100,000 × 50 = Rp5,000,000 but receive 45 × Rp100,000 + 50 × Rp10,000, you've lost Rp500,000.
+
 **What to do:**
 - Say firmly: "Wait, let me count first" and don't move
-- Use your bundling verification method (see Article 2)
+- Use your [bundling verification method](understanding-rupiah) (see [Understanding Rupiah](understanding-rupiah))
+- **Separate by denomination:** Stack all Rp100,000 together, all Rp50,000 together, etc. Count each stack separately
 - Take your time; don't feel rushed
 - If they show impatience or annoyance, recount extra carefully—that's a sign something's wrong
 
@@ -113,9 +119,16 @@ This is the "distraction team" scam technique. They make you lose focus while ca
 **Why it's dangerous:**
 Fast counting + shuffled piles = perfect setup for sleight of hand (palming notes). Some bills can disappear without you knowing.
 
+**Specific scam to watch for—The "Recount" Trick:**
+After you've verified the amount, they offer: "Let me count once more to make absolutely sure." During this **second count**, they palm some bills (sleight-of-hand). You already saw the correct amount once, so you don't pay attention to the recount—and leave with less money.
+
+**Never let them recount after you've verified.** Once you've confirmed the amount, the transaction is done.
+
 **What to do:**
 - Request organized counting: "Can you organize this by denomination?"
 - Ask them to recount in a more orderly way
+- **Critical:** After you verify the final count, say "Thank you" and put the money away immediately
+- If they offer to "recount to make sure," decline firmly: "I've already counted. Thank you"
 - If they refuse or say "not necessary," that's a red flag—cancel
 - If they get visibly irritated at the request, something's definitely wrong
 
@@ -191,9 +204,68 @@ Serious money changers always have adequate denominations. If they can't, it sig
 - Something's off about their setup
 
 **What to do:**
-- Don't compromise—you have the right to your requested denominations
+- Don't compromise—you have the right to your requested [denominations](understanding-rupiah)
 - If they truly can't accommodate, find another changer
 - Don't accept an "alternative"; you earned the right to choose
+
+### RED FLAG #10: Your Bills Are "Damaged" or Rejected
+
+**What it is:**
+After you hand over your foreign currency, they examine it and claim:
+- "This bill has a small fold/corner damage"
+- "The ink is slightly faded"
+- "There's a minor mark on the edge"
+- "Bank Indonesia won't accept this condition"
+
+Then they offer:
+- Lower rate for "damaged" bills
+- Pressure you to accept anyway
+- Or refuse to return your money until you agree to worse terms
+
+**Why it's dangerous:**
+This is a psychological tactic to create urgency and pressure. Your money is already in their hands, and now they've created a problem that didn't exist. Most travelers will accept worse terms just to get their money back.
+
+**The reality:**
+Major Indonesian banks (BCA, Mandiri, BNI) and legitimate money changers accept USD/EUR in normal circulated condition. Bills don't need to be pristine—minor wear is completely normal and acceptable.
+
+**What to do:**
+- Don't accept their assessment—minor folds and normal wear are acceptable everywhere
+- Demand your money back: "Please return my bills. I'll go elsewhere"
+- Never agree to a worse rate for normal wear
+- If they refuse to return your money, this is extremely serious—contact authorities
+
+### RED FLAG #11: Street Money Changers Approaching You
+
+**What it is:**
+Someone approaches you on the street, at the beach, near tourist attractions, or outside legitimate changers offering:
+- "Better rate than the shop"
+- "No commission, no waiting"
+- "I can change right now, fast service"
+- "Special rate just for you today"
+
+They may:
+- Be persistent and follow you
+- Show a large stack of cash to appear legitimate
+- Claim to "work for" a nearby money changer
+- Operate from a backpack, motorbike, or hidden location
+
+**Why it's dangerous:**
+This is outright fraud or robbery setup. Common outcomes:
+- **Counterfeit bills:** You receive fake or worthless Indonesian Rupiah
+- **Shortchanging:** They count fast and you receive far less than promised
+- **Theft:** They grab your money and run, or accomplices distract you while they steal
+- **Switch:** They take your real bills and switch for damaged/worthless foreign currency
+
+**There is no legitimate reason** for a money changer to approach you on the street. Licensed changers have proper locations, signage, and don't solicit.
+
+**What to do:**
+- **Never engage**—don't even stop to listen
+- Say firmly: "No thank you" and keep walking
+- Don't show your money or wallet
+- If persistent, enter a shop, hotel, or busy area
+- Report to security or police if they won't leave you alone
+
+---
 
 ## How to Exit Gracefully
 
@@ -248,15 +320,18 @@ Licensed changer (PVA Berizin + visible certificate)?
 ## Key Takeaways
 
 1. **License is the baseline** – PVA Berizin logo and certificate visible = eligible; otherwise, walk away
-2. **"Too good" rates are bait** – Check real-time app rates; if it's too high, so is the risk
+2. **"Too good" rates are bait** – Check real-time app rates; if it's too high, so is the risk. See [common scam tactics](avoid-scam).
 3. **Written receipt is essential** – Never proceed without one; cancel if refused
 4. **Distraction and pressure = red flags** – Cancel both
-5. **Fast counting + shuffled piles = setup for fraud** – Request organized, orderly counting
+5. **Fast counting + shuffled piles = setup for fraud** – Request organized, orderly [counting](avoid-scam); **never let them recount after you've verified**
 6. **Sudden fees are never good** – Know your final amount before any cash moves
 7. **Rate changes mid-transaction = abort** – Get your money back immediately
 8. **Unsafe location = don't go** – Find a changer in a secure, busy area
-9. **Don't feel obligated to proceed** – Walking away is the right choice if something feels off
-10. **Other options always exist** – Never force yourself to use a suspicious changer out of convenience
+9. **"Damaged bill" excuse = pressure tactic** – Normal wear is acceptable; demand your money back
+10. **Street changers approaching you = guaranteed scam** – Never engage; legitimate changers don't solicit
+11. **Mixing denominations (Rp10k in Rp100k stack)** – Separate and count each denomination stack separately
+12. **Don't feel obligated to proceed** – Walking away is the right choice if something feels off
+13. **Other options always exist** – Never force yourself to use a suspicious changer out of convenience
 
 ## Final Word
 

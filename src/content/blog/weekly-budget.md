@@ -2,6 +2,8 @@
 title: "How to Plan Your Cash Needs for a Week in Indonesia"
 excerpt: "Calculate the exact amount of cash to withdraw for your week-long trip based on your activities and daily spending."
 date: "2026-02-01"
+category: "budget-planning"
+order: 3
 ---
 
 # How to Plan Your Cash Needs for a Week in Indonesia
@@ -10,13 +12,13 @@ date: "2026-02-01"
 
 Most travelers make one of two mistakes: they withdraw cash erratically ("I'll grab some when I need it") and end up at ATMs constantly, or they withdraw too much upfront and carry excessive risk. Neither is ideal.
 
-Planning cash for one week gives you a clear withdrawal strategy that minimizes ATM visits (saving time and fees), reduces risk from carrying too much, and lets you manage your itinerary without worrying about money.
+Planning cash for one week gives you a clear [withdrawal strategy](atm-strategy) that minimizes ATM visits (saving time and fees), reduces risk from carrying too much, and lets you manage your itinerary without worrying about money.
 
 This article teaches you how to calculate your exact cash needs for a week, structured by activity level and spending pattern.
 
 ## Step 1: Know Your Daily Budget (From Your Travel Style)
 
-First, refer to Article 4.1 and identify which budget profile matches you:
+First, refer to our [daily budget breakdown guide](daily-budget) and identify which budget profile matches you:
 
 - **Budget traveler:** $50 USD/day (Rp825.000/day)
 - **Mid-range traveler:** $100 USD/day (Rp1.650.000/day)
@@ -32,13 +34,13 @@ For planning, round to nearest Rp50.000 for simplicity:
 Your daily budget isn't uniform—some days are cheaper (rest days, no activities), some are expensive (paid tours, nice dinners). Plan for this variation.
 
 **Identify high-expense days:**
-- Days with paid activities (tours, classes, adventure sports): add Rp300.000–600.000
-- Days with nicer dining: add Rp100.000–300.000
+- Days with paid activities (tours, classes, adventure sports): add Rp300.000–600.000. See [activity cost breakdowns](daily-budget) for specific pricing.
+- Days with nicer dining: add Rp100.000–300.000. Service charge may apply at upscale restaurants.
 - Days with special purchases (souvenirs, shopping): add Rp200.000–500.000
 
 **Identify low-expense days:**
 - Beach/hiking days (free natural activities): subtract Rp100.000–200.000
-- Days eating street food only: subtract Rp50.000–100.000
+- Days eating [street food](understanding-rupiah) only: subtract Rp50.000–100.000
 - Days without transport needs (resting at accommodation): subtract Rp50.000–150.000
 
 **Example week structure:**
@@ -90,15 +92,15 @@ Round to Rp14.000.000 for easy mental math.
 
 ## Step 5: Request Proper Denominations When Withdrawing
 
-When you withdraw Rp14.000.000, request a mix that works for your week:
+When you withdraw Rp14.000.000, request a mix that works for your week. See our guide on [small change](small-change) for optimal denomination strategies:
 
 **For budget/mid-range travelers:**
-- Rp100.000 × 8 notes = Rp800.000 (for medium purchases, emergency)
-- Rp50.000 × 12 notes = Rp600.000 (for meals, transport)
-- Rp20.000 × 10 notes = Rp200.000 (for market, warung)
-- Rp10.000 × 10 notes = Rp100.000 (for small items, tips)
-- Rp5.000 × 20 notes = Rp100.000 (for tips, donations, small buys)
-- Remaining: smaller denominations or additional Rp50.000 notes
+- [Rp100.000](understanding-rupiah) × 8 notes = Rp800.000 (for medium purchases, emergency)
+- [Rp50.000](understanding-rupiah) × 12 notes = Rp600.000 (for meals, transport)
+- [Rp20.000](understanding-rupiah) × 10 notes = Rp200.000 (for market, warung)
+- [Rp10.000](small-change) × 10 notes = Rp100.000 (for small items, parking, snacks)
+- [Rp5.000](small-change) × 20 notes = Rp100.000 (for temple [donations](small-change), parking, small buys)
+- Remaining: smaller denominations or additional [Rp50.000 notes](understanding-rupiah)
 
 **For luxury travelers:**
 - Rp100.000 × 20 notes = Rp2.000.000
@@ -113,9 +115,9 @@ When you withdraw Rp14.000.000, request a mix that works for your week:
 
 **Itinerary:**
 - Days 1–2: Arrival, exploration, beach
-- Day 3: Paid snorkeling tour (Rp700.000)
+- Day 3: Paid snorkeling tour (Rp750.000–1.000.000)
 - Day 4: Spa day + nice dinner (Rp500.000 total)
-- Day 5: Cooking class (Rp400.000)
+- Day 5: Cooking class (Rp400.000–600.000)
 - Days 6–7: Light activity, departure
 
 **Calculation:**
@@ -123,36 +125,38 @@ When you withdraw Rp14.000.000, request a mix that works for your week:
 | Item | Amount |
 |---|---|
 | Base daily budget × 7 days | Rp11.550.000 |
-| Snorkeling tour surcharge | Rp700.000 |
+| Snorkeling tour surcharge | Rp850.000 (mid-range estimate) |
 | Spa + nice dinner surcharge | Rp500.000 |
-| Cooking class surcharge | Rp400.000 |
-| Subtotal | Rp13.150.000 |
-| 10% safety buffer | Rp1.315.000 |
-| **Total to withdraw** | **Rp14.465.000** |
+| Cooking class surcharge | Rp500.000 (mid-range estimate) |
+| Subtotal | Rp13.400.000 |
+| 10% safety buffer | Rp1.340.000 |
+| **Total to withdraw** | **Rp14.740.000** |
 
-**Round to:** Rp14.500.000 for easy tracking
+**Round to:** Rp14.500.000–15.000.000 for easy tracking
 
 **Withdrawal request:** "I'd like Rp14.500.000 in a mix: several Rp100.000, several Rp50.000, some Rp20.000, and smaller denominations."
 
 ## Alternative: The "Periodic Withdrawal" Strategy
 
-Instead of withdrawing for the full week, some travelers prefer smaller, more frequent withdrawals:
+Instead of withdrawing for the full week, some travelers prefer smaller, more frequent withdrawals. See our detailed [ATM strategy guide](atm-strategy) for fee minimization:
 
 **Weekly withdrawals (recommended):**
 - Pros: Fewer ATM visits, less cash carried, clear weekly budget
 - Cons: Requires planning itinerary upfront
+- Best for: Most travelers following a [daily budget plan](daily-budget)
 
 **Bi-weekly withdrawals:**
 - For 2-week+ trips
 - Pros: Even fewer ATM visits, simpler accounting
 - Cons: Must carry more cash, less flexibility mid-period
+- Best for: Travelers with secure [cash storage](cash-storage) systems
 
 **3-4 day withdrawals:**
 - For highly flexible/unplanned trips
 - Pros: Always have minimal cash, very flexible itinerary
 - Cons: Constant ATM hunting, pays fees frequently, disruptive
 
-**Recommendation:** Weekly withdrawal is the balance between convenience and flexibility for most travelers.
+**Recommendation:** Weekly withdrawal is the balance between convenience and flexibility for most travelers. Learn [optimal ATM timing](atm-strategy) for best results.
 
 ## Special Scenarios
 
@@ -176,17 +180,18 @@ When you're moving between cities, plan cash per city:
 **Total for 7 days: Rp11.600.000 + 10% buffer = Rp12.760.000**
 
 **Strategy:** 
-- Withdraw Rp5.000.000 before entering City 1
+- Withdraw Rp5.000.000 before entering City 1 ([BCA, Mandiri, or BNI ATMs](atm-strategy) preferred)
 - Withdraw Rp4.000.000 before entering City 2 (City 1 remaining + City 2 need)
 - Carry remaining for City 3
+- See [safe cash carrying strategies](cash-storage) for multi-city trips
 
 ### Return Home (Last Day)
 
 Leave minimal cash for final day. End-of-trip leftover rupiah is common and expected—you can:
-- Leave as tip for housekeeping
-- Donate at temples
+- Optional: Leave for housekeeping if you want (Rp20.000–50.000, not mandatory)
+- [Donate at temples](small-change)
 - Use at airport shops/restaurants
-- Exchange back (though at worse rates than in-city)
+- Exchange back (though at worse rates than [licensed money changers](avoid-scam))
 
 **Plan to have 0–Rp200.000 remaining on your final day.** If you have more, adjust your Week 7 planned spending upward.
 
@@ -197,7 +202,7 @@ Leave minimal cash for final day. End-of-trip leftover rupiah is common and expe
 - If not, add accommodation per night to your daily budget calculation
 
 **Mistake #2: Underestimating activity costs**
-- Paid tours/activities can be Rp500.000–1.000.000+
+- Paid tours/activities can be Rp500.000–1.000.000+ (see [daily activity costs](daily-budget))
 - If you plan 2–3 activities per week, this is significant
 - Be realistic about what you'll actually do
 
@@ -234,15 +239,15 @@ This covers baseline + moderate activities + buffer. If you plan heavy activity 
 
 ## Key Takeaways
 
-1. **Start with your daily budget** – Know if you're $50, $100, or $200/day
+1. **Start with your [daily budget](daily-budget)** – Know if you're $50, $100, or $200/day
 2. **Account for activity surcharges** – Paid tours/spas aren't "extra"; they're planned expenses
 3. **Plan for variable spending** – High days and low days balance out; don't use daily average for weekly
 4. **Add 10–15% safety buffer** – Unexpected costs always happen
-5. **Request proper denominations** – Withdraw with a mix so you can spend without breaking large notes
-6. **One withdrawal per week is ideal** – Balances convenience vs. flexibility for most travelers
-7. **Carry only what you planned** – Excess cash = overspending temptation
+5. **Request proper [denominations](small-change)** – Withdraw with a mix so you can spend without breaking [large notes](understanding-rupiah)
+6. **One [withdrawal](atm-strategy) per week is ideal** – Balances convenience vs. flexibility for most travelers
+7. **Carry only what you planned** – Excess cash = overspending temptation (see [cash storage](cash-storage))
 8. **Account for city transitions** – Moving between cities changes costs and ATM access
-9. **Leave room for end-of-trip remainder** – Some leftover rupiah is normal and fine
+9. **Leave room for end-of-trip remainder** – Some leftover rupiah is normal and fine; use for temple [donations](small-change) or small purchases
 10. **Track actual spending for 2–3 days** – Then adjust your estimate if needed
 
 Planning cash by the week turns a vague concern ("How much do I need?") into a concrete number you can withdraw and manage. It's boring accounting, but it eliminates cash-related stress for the entire trip.

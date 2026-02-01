@@ -2,6 +2,8 @@
 title: "Why Indonesian Prices Look So Big - Dealing with Zeros"
 excerpt: "In Indonesia, prices are often written with lots of zeros. Why? And how does this affect your budgeting?"
 date: "2026-02-01"
+category: "foundation"
+order: 2
 ---
 
 
@@ -13,7 +15,7 @@ This is the most common psychological hurdle for tourists arriving in Indonesia.
 
 Let's start with the brutal honesty: the Indonesian rupiah is worth much less per unit than most Western currencies.
 
-**Current Approximate Exchange Rates (2025):**
+**Current Approximate Exchange Rates (2026):**
 - 1 USD = ~16.600 IDR
 - 1 EUR = ~17.500 IDR
 - 1 GBP = ~21.000 IDR
@@ -91,13 +93,13 @@ Here's a mental trick: compare Indonesian prices to your home country's cheapest
 
 **In the USA:**
 - A basic meal at a chain restaurant: $8-12 USD
-- A coffee: $3-5 USD
+- A coffee: $3–5 USD (Rp25.000–40.000)
 - A taxi ride 5km: $8-15 USD
 - A hotel night (budget): $50-80 USD
 
 **In Indonesia:**
-- A meal at a good restaurant: Rp50.000-100.000 ($3-6 USD)
-- A coffee: Rp20.000-50.000 ($1.20-3 USD)
+- A meal at a good restaurant: Rp50.000–90.000 ($3–5.50 USD)
+- A coffee: Rp20.000–40.000 ($1.20–2.50 USD)
 - A taxi ride 5km: Rp50.000-75.000 ($3-4.50 USD)
 - A hotel night (budget): Rp300.000-600.000 ($18-36 USD)
 
@@ -201,7 +203,7 @@ Extremely safe. Professional staff, security cameras, and official regulation me
 **Time required:**
 5-15 minutes depending on the amount and busy-ness
 
-**Realistic exchange rates (2025):**
+**Realistic exchange rates (2026):**
 - USD to IDR: Rp16.450-16.550 per $1 (compared to mid-market ~16.600)
 - EUR to IDR: Rp17.300-17.450 per €1
 - GBP to IDR: Rp20.800-21.000 per £1
@@ -231,7 +233,7 @@ Banks offer fair but not optimal rates. They typically add a 1-3% margin to the 
 
 **Fees you should know:**
 - Local ATM fee (charged by the bank): Rp0-75.000 per withdrawal (varies by bank)
-- Your home bank may charge 2-8% foreign transaction fee (this varies; check with your bank before traveling)
+- Your home bank may charge 1-3% foreign transaction fee (this varies; check with your bank before traveling)
 - Currency conversion fee: Usually 1-3% (built into the exchange rate they offer)
 
 **How to minimize fees:**
@@ -248,7 +250,7 @@ Very safe. Bank-level security. Virtual zero risk of counterfeits.
 **Time required:**
 5 minutes (faster than money changers)
 
-**Realistic exchange rates (2025):**
+**Realistic exchange rates (2026):**
 - USD to IDR: Rp16.400-16.600 per $1
 - Slightly variable depending on the bank and time of day
 

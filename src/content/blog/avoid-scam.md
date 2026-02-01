@@ -2,6 +2,8 @@
 title: "10 Money Exchange Scams in Indonesia (and How to Avoid Them)"
 excerpt: "Recognize 10 common money changer scams and practical steps to avoid them when exchanging currency in Indonesia."
 date: "2026-02-01"
+category: "exchange-safety"
+order: 1
 ---
 
 
@@ -9,9 +11,9 @@ Currency exchange scams typically happen because of two factors: rates that look
 
 ## Safety baseline (before we list the scams)
 
-- Choose a licensed money changer: look for the "PVA Berizin / Pedagang Valuta Asing Berizin" logo (Bank Indonesia licensed) and displayed business authorization documents.
-- If the rate offered is "much higher than normal" and feels too good, treat that as your first red flag.
-- Request a written receipt (slip) showing the amount of foreign currency, the exchange rate, and the total rupiah you'll receive—this is standard practice for reputable changers.
+- Choose a [licensed money changer](red-flags-changer): look for the "PVA Berizin / Pedagang Valuta Asing Berizin" logo (Bank Indonesia licensed) and displayed business authorization documents. See [red flags to watch for](red-flags-changer).
+- If the rate offered is "much higher than normal" and feels too good, treat that as your first [red flag](red-flags-changer).
+- Request a [written receipt](red-flags-changer) (slip) showing the amount of foreign currency, the exchange rate, and the total rupiah you'll receive—this is standard practice for reputable changers.
 
 ## The 10 Most Common Scams (And How to Avoid Them)
 
@@ -31,9 +33,9 @@ Currency exchange scams typically happen because of two factors: rates that look
 **How it works:** Cash is counted quickly in front of you, then a few notes are "palmed" or concealed before being handed to you. The operator relies on you not being focused or being tired.
 
 **How to avoid it:**
-- Request money organized by denomination (all Rp100.000 separate, all Rp50.000 separate, etc.)
-- Count it yourself at the counter before putting it in your wallet
-- If they won't organize it by denomination, that's a red flag—cancel
+- Request money organized by denomination (all [Rp100.000](understanding-rupiah) separate, all [Rp50.000](understanding-rupiah) separate, etc.)
+- [Count it yourself](breaking-bills) at the counter before putting it in your wallet
+- If they won't organize it by denomination, that's a [red flag](red-flags-changer)—cancel
 
 ### 3) "Distraction Team" (Someone Else Diverts Your Attention)
 
@@ -94,8 +96,8 @@ Currency exchange scams typically happen because of two factors: rates that look
 **How it works:** You expect Rp2.000.000 but receive only Rp1.500.000 because the mix of small denominations makes it hard to track the total. They bet you'll count at home, not at the counter.
 
 **How to avoid it:**
-- Request large denominations first (Rp100.000 or Rp50.000), then smaller ones
-- Always count the total yourself before leaving the counter—this is non-negotiable
+- Request large denominations first ([Rp100.000](understanding-rupiah) or [Rp50.000](understanding-rupiah)), then smaller ones
+- Always [count the total](breaking-bills) yourself before leaving the counter—this is non-negotiable
 - If there's a discrepancy, tell them immediately before you leave
 
 ### 10) "Pressure to Accept Quickly" (Rushed Out Before You Notice)
@@ -111,7 +113,7 @@ Currency exchange scams typically happen because of two factors: rates that look
 ## Simple Safety Checklist (You Can Print This)
 
 **Before Exchanging:**
-- ☐ Check for licensed sign (PVA Berizin logo, business authorization displayed)
+- ☐ Check for [licensed sign](red-flags-changer) (PVA Berizin logo, business authorization displayed)
 - ☐ Compare rate on app against their board
 - ☐ Rate is not "too good" (use real-time apps to verify)
 
@@ -137,7 +139,7 @@ Remember: you don't have to complete any transaction that feels wrong. There's a
 1. **Licensed exchange is your first baseline** – No license visible = don't exchange here
 2. **"Too good" rates are bait** – Compare against real-time apps; don't trust their board alone
 3. **Written receipt is non-negotiable** – Always get one before money is counted
-4. **Distraction and pressure = red flags** – Cancel if either occurs
+4. **Distraction and pressure = [red flags](red-flags-changer)** – Cancel if either occurs
 5. **Fast counting + shuffled piles = setup for fraud** – Request organized counting and take your time
 6. **Surprise fees are never good** – Know your final total before any cash moves
 7. **Rate changes mid-transaction = immediate abort** – Take your money back and leave

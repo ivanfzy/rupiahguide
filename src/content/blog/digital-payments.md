@@ -2,6 +2,8 @@
 title: "Digital Payments in Indonesia: e-Wallets, QRIS, and Modern Apps"
 excerpt: "Learn how to use Indonesia's mobile payment apps effectively and when they actually simplify your travel."
 date: "2026-02-01"
+category: "digital-emergency"
+order: 1
 ---
 
 
@@ -68,7 +70,7 @@ Indonesia's second-largest e-wallet, owned by PT Fintech Karya Indonesia. Availa
 **Pros:**
 - Broader merchant acceptance than GoPay
 - Can earn cashback (for transactions, referrals)
-- No top-up required for some transactions (credit model available)
+- No top-up required for some transactions (credit model available — requires Indonesian phone verification, difficult for short-term tourists)
 - Standalone app (don't need Gojek)
 - Available for international card holders
 
@@ -99,7 +101,7 @@ A digital financial platform offering wallet and credit features. Backed by Indo
 - Offline merchants: ✓ Less common than GoPay/OVO
 
 **Pros:**
-- Credit feature (buy now, pay later)
+- Credit feature (buy now, pay later) — requires Indonesian ID verification, not accessible to most tourists
 - Some merchants offer better rates
 - Good for online shopping
 - Cashback programs
@@ -182,7 +184,7 @@ QRIS stands for "Quick Response Code Indonesian Standard." It's a unified QR cod
 **Disadvantages:**
 - Requires internet connection (can fail)
 - Requires pre-loaded balance or bank account access
-- Some vendors charge small surcharge (1–2%)
+- Some vendors may discourage QRIS for very small purchases (under Rp20.000) — pay cash for transactions under Rp50.000 to be safe
 - Psychology: easier to overspend without physical cash
 - Still need some cash as backup
 
@@ -190,9 +192,9 @@ QRIS stands for "Quick Response Code Indonesian Standard." It's a unified QR cod
 
 QRIS is genuinely useful and widely accepted in Indonesia. However, **tourists don't need it**. Here's why:
 
-- You'll be withdrawing cash anyway (ATM withdrawal is easier than setting up multiple payment apps)
-- Cash is accepted everywhere QRIS is (redundant benefit)
-- Cash doesn't require setup or connectivity
+- You'll be [withdrawing cash](atm-strategy) anyway ([ATM withdrawal](atm-strategy) is easier than setting up multiple payment apps)
+- [Cash](cash-vs-card) is accepted everywhere QRIS is (redundant benefit)
+- [Cash](cash-vs-card) doesn't require setup or connectivity
 - You're only staying a few weeks (not worth infrastructure investment)
 
 **QRIS is best for:** Long-term expats, frequent business travelers, locals managing monthly expenses
@@ -218,7 +220,7 @@ These services link your debit/credit card to your phone, allowing contactless p
 - Some supermarkets (large chains)
 
 **Where they don't:**
-- Warungs and small restaurants
+- [Warungs](understanding-rupiah) and small restaurants
 - Markets
 - Taxis
 - Most mid-range establishments
@@ -226,7 +228,7 @@ These services link your debit/credit card to your phone, allowing contactless p
 
 **Reality:** Acceptance is 20–30% even in major cities. Not reliable for primary payments.
 
-**Recommendation for tourists:** Skip setting these up. Use cash or your actual debit card instead.
+**Recommendation for tourists:** Skip setting these up. Use [cash](cash-vs-card) or your actual debit card instead.
 
 ## Setting Up a Wallet: Step-by-Step for Tourists
 
@@ -267,15 +269,15 @@ If you decide a wallet is useful for your trip, here's how to set up GoPay (most
 
 **Recommendation:** Don't bother setting up wallets
 - Too short to justify setup time
-- Stick with cash for everything
+- Stick with [cash](cash-vs-card) for everything
 - One less thing to manage
 
 ### 2-3 Week Trip
 
-**Recommendation:** Set up GoPay only (if using Grab heavily)
-- Use for Grab/Gojek rides (saves transaction time)
+**Recommendation:** Set up GoPay only (if using [Grab/Gojek](cash-vs-card) heavily)
+- Use for [Grab/Gojek](cash-vs-card) rides (saves transaction time)
 - Load small amount (Rp500.000–1.000.000)
-- Use cash for everything else
+- Use [cash](cash-vs-card) for everything else
 - Withdraw unused balance before leaving
 
 ### 1-Month+ Trip
@@ -342,15 +344,15 @@ There's a category of apps (like Wise, Revolut, Remitly) that handle internation
 
 ## Key Takeaways
 
-1. **Wallets are convenient but optional for tourists** – Cash works everywhere they work
+1. **Wallets are convenient but optional for tourists** – [Cash](cash-vs-card) works everywhere they work
 2. **GoPay is easiest to set up** – If you use Grab, just load it for rides
 3. **OVO has better merchant coverage** – If you do set up a wallet, OVO is second option
 4. **QRIS is genuinely useful in Indonesia** – But you don't need to set anything up; can scan with bank app
 5. **Don't bother with Google Pay or Apple Pay** – Acceptance too low
 6. **Wallets are best for multi-week trips** – Short trips aren't worth the setup
 7. **Always load small amounts** – You might not use all balance
-8. **Keep cash as primary method** – Wallets fail when internet is down
+8. **Keep [cash](cash-vs-card) as primary method** – Wallets fail when internet is down
 9. **Withdrawing unused balance takes 1–3 days** – Don't load too much at the end
 10. **No setup required for QRIS if you just use cash** – QRIS is for people paying digitally; you're paying cash
 
-**Bottom line:** For most tourists, wallets are a "nice to have, not need to have." Focus on cash management; if you end up using Grab heavily and want to streamline, load GoPay at that point. You don't need to pre-plan digital payments.
+**Bottom line:** For most tourists, wallets are a "nice to have, not need to have." Focus on [cash management](cash-storage); if you end up using [Grab](cash-vs-card) heavily and want to streamline, load GoPay at that point. You don't need to pre-plan digital payments.

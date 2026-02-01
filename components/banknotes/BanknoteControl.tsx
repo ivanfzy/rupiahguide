@@ -14,7 +14,7 @@ const BanknoteControl: React.FC<BanknoteControlProps> = ({ config, count, onIncr
   return (
     <div className="flex items-center justify-between bg-white p-3 rounded-2xl shadow-sm transition-all">
       {/* Visual Preview (Mini) using the new shared component */}
-      <div className="h-12 w-24 flex-shrink-0">
+      <div className="h-14 w-26 flex-shrink-0">
         <BanknoteVisual 
           config={config} 
           className="w-full h-full text-xs" // text-xs scales down the internal text

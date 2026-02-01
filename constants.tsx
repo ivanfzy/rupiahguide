@@ -229,29 +229,35 @@ export const TRANSLATIONS = {
 
 import type { IconProps } from '@phosphor-icons/react';
 
+// Extend IconProps to explicitly include className if it's missing or for better compatibility
+interface CustomIconProps extends IconProps {
+  className?: string;
+  onClick?: () => void;
+}
+
 export const Icons = {
-  Refresh: (props: IconProps) => <ArrowsClockwise weight="duotone" {...props} />,
-  Wallet: (props: IconProps) => <Wallet weight="duotone" {...props} />,
-  Search: (props: IconProps) => <MagnifyingGlass weight="duotone" {...props} />,
-  Info: (props: IconProps) => <Info weight="duotone" {...props} />,
-  Speaker: (props: IconProps) => <SpeakerHigh weight="duotone" {...props} />,
-  Star: ({ filled, ...props }: { filled: boolean } & IconProps) => (
+  Refresh: (props: CustomIconProps) => <ArrowsClockwise weight="duotone" {...props} />,
+  Wallet: (props: CustomIconProps) => <Wallet weight="duotone" {...props} />,
+  Search: (props: CustomIconProps) => <MagnifyingGlass weight="duotone" {...props} />,
+  Info: (props: CustomIconProps) => <Info weight="duotone" {...props} />,
+  Speaker: (props: CustomIconProps) => <SpeakerHigh weight="duotone" {...props} />,
+  Star: ({ filled, ...props }: { filled: boolean } & CustomIconProps) => (
     <Star weight={filled ? "fill" : "duotone"} {...props} />
   ),
-  X: (props: IconProps) => <X weight="bold" {...props} />,
-  Plus: (props: IconProps) => <Plus weight="bold" {...props} />,
-  Minus: (props: IconProps) => <Minus weight="bold" {...props} />,
-  Trash: (props: IconProps) => <Trash weight="duotone" {...props} />,
-  Globe: (props: IconProps) => <Globe weight="duotone" {...props} />,
-  Flag: (props: IconProps) => <Flag weight="duotone" {...props} />,
-  Book: (props: IconProps) => <BookOpen weight="duotone" {...props} />,
-  Article: (props: IconProps) => <Article weight="duotone" {...props} />,
-  Translate: (props: IconProps) => <Translate weight="duotone" {...props} />,
-  Coins: (props: IconProps) => <Coins weight="duotone" {...props} />,
-  Receipt: (props: IconProps) => <Receipt weight="duotone" {...props} />,
-  Money: (props: IconProps) => <Money weight="duotone" {...props} />,
-  MoneyWavy: (props: IconProps) => <MoneyWavy weight="duotone" {...props} />,
-  Back: (props: IconProps) => <CaretLeft weight="bold" {...props} />,
-  Question: (props: IconProps) => <Question weight="duotone" {...props} />,
-  Rotate: (props: IconProps) => <ArrowsClockwise weight="duotone" {...props} />
+  X: (props: CustomIconProps) => <X weight="bold" {...props} />,
+  Plus: (props: CustomIconProps) => <Plus weight="bold" {...props} />,
+  Minus: (props: CustomIconProps) => <Minus weight="bold" {...props} />,
+  Trash: (props: CustomIconProps) => <Trash weight="duotone" {...props} />,
+  Globe: (props: CustomIconProps) => <Globe weight="duotone" {...props} />,
+  Flag: (props: CustomIconProps) => <Flag weight="duotone" {...props} />,
+  Book: (props: CustomIconProps) => <BookOpen weight="duotone" {...props} />,
+  Article: (props: CustomIconProps) => <Article weight="duotone" {...props} />,
+  Translate: (props: CustomIconProps) => <Translate weight="duotone" {...props} />,
+  Coins: (props: CustomIconProps) => <Coins weight="duotone" {...props} />,
+  Receipt: (props: CustomIconProps) => <Receipt weight="duotone" {...props} />,
+  Money: (props: CustomIconProps) => <Money weight="duotone" {...props} />,
+  MoneyWavy: (props: CustomIconProps) => <MoneyWavy weight="duotone" {...props} />,
+  Back: (props: CustomIconProps) => <CaretLeft weight="bold" {...props} />,
+  Question: (props: CustomIconProps) => <Question weight="duotone" {...props} />,
+  Rotate: (props: CustomIconProps) => <ArrowsClockwise weight="duotone" {...props} />
 };
