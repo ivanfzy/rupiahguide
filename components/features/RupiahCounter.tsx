@@ -201,7 +201,7 @@ const RupiahCounter: React.FC<RupiahCounterProps> = ({ popularRates, lastUpdated
              <span className="text-[10px] text-slate-400">{t.lastUpdated} {lastUpdated}</span>
            </div>
            
-           <div className="bg-slate-900 text-white rounded-3xl p-6 shadow-lg relative overflow-hidden">
+           <div className="bg-slate-900 text-white rounded-2xl p-6 shadow-lg relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500 rounded-full mix-blend-overlay filter blur-2xl opacity-20 -translate-y-1/2 translate-x-1/2"></div>
               
               <div className="space-y-0 relative z-10 divide-y divide-slate-800/50">

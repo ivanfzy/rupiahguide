@@ -135,7 +135,7 @@ function Home() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans flex flex-col">
       <SEOHead 
-        title="Home - Tourist Currency Companion" 
+        title="RupiahGuide - Indonesia Travel Money Guide" 
         schema={SCHEMA_ORG.website}
       />
       
