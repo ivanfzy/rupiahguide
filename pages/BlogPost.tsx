@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import matter from 'gray-matter';
@@ -84,6 +85,7 @@ const BlogPost = () => {
       <main className="px-6 flex-grow -mt-12 relative z-20 pb-12">
         <article className="max-w-4xl mx-auto bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-slate-100 prose prose-lg prose-indigo prose-slate">
           <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
             components={{
               h1: ({...props}) => <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mt-4 mb-4 leading-tight" {...props} />,
               h2: ({...props}) => <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mt-8 mb-4 leading-tight border-b border-slate-100 pb-2" {...props} />,
@@ -95,6 +97,12 @@ const BlogPost = () => {
               a: ({...props}) => <a className="text-indigo-600 hover:text-indigo-500 font-medium underline decoration-indigo-200 hover:decoration-indigo-500 transition-all" {...props} />,
               blockquote: ({...props}) => <blockquote className="border-l-4 border-indigo-500 pl-4 italic text-slate-700 bg-slate-50 py-2 pr-4 rounded-r-lg mb-6" {...props} />,
               code: ({...props}) => <code className="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono font-medium" {...props} />,
+              table: ({...props}) => <div className="overflow-x-auto my-8 rounded-lg border border-slate-200 shadow-sm"><table className="min-w-full divide-y divide-slate-200 !m-0" {...props} /></div>,
+              thead: ({...props}) => <thead className="bg-slate-50" {...props} />,
+              tbody: ({...props}) => <tbody className="bg-white divide-y divide-slate-200" {...props} />,
+              tr: ({...props}) => <tr className="hover:bg-slate-50 transition-colors" {...props} />,
+              th: ({...props}) => <th className="px-4 py-3 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider" {...props} />,
+              td: ({...props}) => <td className="px-4 py-3 text-sm text-slate-600 whitespace-normal" {...props} />,
             }}
           >
             {content}
