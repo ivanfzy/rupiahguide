@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import { useImagePreload } from './src/hooks/useImagePreload';
+import { ScrollToTop } from './src/components/ScrollToTop';
 
 function App() {
   // Preload gambar banknotes saat aplikasi dimulai
@@ -11,6 +12,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<Blog />} />
