@@ -71,6 +71,7 @@ const CATEGORY_ORDER = [
 
 const Blog = () => {
   const [groupedPosts, setGroupedPosts] = useState<Record<string, BlogPost[]>>({});
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const modules = import.meta.glob('../src/content/blog/*.md', { query: '?raw', import: 'default' });
@@ -109,6 +110,7 @@ const Blog = () => {
       });
       
       setGroupedPosts(grouped);
+      setLoading(false);
     };
 
     loadPosts();
@@ -116,7 +118,7 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans flex flex-col">
-      <Navbar language="en" setLanguage={() => {}} />
+      <Navbar language="en" setLanguage={() => {}} hideLanguageSwitch={true} />
 
       <div className="bg-slate-900 text-white pb-16 pt-10 px-6 shadow-2xl relative overflow-hidden shrink-0 mb-8">
         <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500 rounded-full mix-blend-overlay filter blur-3xl opacity-20 -translate-y-1/2 translate-x-1/2"></div>
@@ -124,68 +126,101 @@ const Blog = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-4">RupiahGuide Blog</h1>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
             Essential guides to help you navigate money matters in Indonesia. 
-            Start from the basics and work your way through.
+            Start from the basics.
           </p>
         </div>
       </div>
 
       <main className="px-6 flex-grow max-w-4xl mx-auto w-full pb-12 space-y-12">
-        {CATEGORY_ORDER.map(categoryKey => {
-          const posts = groupedPosts[categoryKey];
-          const categoryInfo = CATEGORY_MAP[categoryKey];
-          
-          if (!posts || posts.length === 0) return null;
-          
-          return (
-            <section key={categoryKey} className="space-y-4">
-              {/* Category Header */}
-              <div className="flex items-center gap-3 pb-2 border-b border-slate-200">
-                <div className="p-2 bg-indigo-100 text-indigo-600 rounded-lg">
-                  {categoryInfo.icon}
+        {loading ? (
+          // Skeleton Loading State
+          <>
+            {[1, 2, 3].map((skeletonGroup) => (
+              <section key={skeletonGroup} className="space-y-4">
+                {/* Category Header Skeleton */}
+                <div className="flex items-center gap-3 pb-2 border-b border-slate-200">
+                  <div className="p-2 bg-slate-200 rounded-lg w-10 h-10 animate-pulse"></div>
+                  <div className="space-y-2">
+                    <div className="h-5 w-32 bg-slate-200 rounded animate-pulse"></div>
+                    <div className="h-3 w-48 bg-slate-200 rounded animate-pulse"></div>
+                  </div>
                 </div>
-                <div>
-                  <h2 className="text-lg font-bold text-slate-800">
-                    {categoryInfo.label}
-                  </h2>
-                  <p className="text-xs text-slate-500">
-                    {categoryInfo.description}
-                  </p>
-                </div>
-              </div>
-              
-              {/* Posts in Category */}
-              <div className="space-y-3">
-                {posts.map((post, index) => (
-                  <Link 
-                    to={`/blog/${post.slug}`} 
-                    key={post.slug} 
-                    className="block group"
-                  >
-                    <article className="bg-white rounded-xl p-5 shadow-sm transition-all duration-300 relative overflow-hidden hover:shadow-md hover:bg-indigo-50/30">
+                
+                {/* Posts Skeleton */}
+                <div className="space-y-3">
+                  {[1, 2, 3].map((skeletonPost) => (
+                    <div key={skeletonPost} className="bg-white rounded-xl p-5 shadow-sm">
                       <div className="flex items-start gap-4">
-                        {/* Order Number */}
-                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center text-sm font-bold group-hover:bg-indigo-100 group-hover:text-indigo-600 transition-colors">
-                          {index + 1}
-                        </div>
-                        
-                        {/* Content */}
-                        <div className="flex-grow min-w-0">
-                          <h3 className="text-base font-bold text-slate-800 mb-1 group-hover:text-indigo-600 transition-colors flex items-center gap-2">
-                            <span>{post.title}</span>
-                            <CaretRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all flex-shrink-0" />
-                          </h3>
-                          <p className="text-sm text-slate-500 leading-relaxed line-clamp-2">
-                            {post.excerpt}
-                          </p>
+                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-slate-200 animate-pulse"></div>
+                        <div className="flex-grow min-w-0 space-y-2">
+                          <div className="h-5 w-3/4 bg-slate-200 rounded animate-pulse"></div>
+                          <div className="h-4 w-full bg-slate-200 rounded animate-pulse"></div>
                         </div>
                       </div>
-                    </article>
-                  </Link>
-                ))}
-              </div>
-            </section>
-          );
-        })}
+                    </div>
+                  ))}
+                </div>
+              </section>
+            ))}
+          </>
+        ) : (
+          CATEGORY_ORDER.map(categoryKey => {
+            const posts = groupedPosts[categoryKey];
+            const categoryInfo = CATEGORY_MAP[categoryKey];
+            
+            if (!posts || posts.length === 0) return null;
+            
+            return (
+              <section key={categoryKey} className="space-y-4">
+                {/* Category Header */}
+                <div className="flex items-center gap-3 pb-2 border-b border-slate-200">
+                  <div className="p-2 bg-indigo-100 text-indigo-600 rounded-lg">
+                    {categoryInfo.icon}
+                  </div>
+                  <div>
+                    <h2 className="text-lg font-bold text-slate-800">
+                      {categoryInfo.label}
+                    </h2>
+                    <p className="text-xs text-slate-500">
+                      {categoryInfo.description}
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Posts in Category */}
+                <div className="space-y-3">
+                  {posts.map((post, index) => (
+                    <Link 
+                      to={`/blog/${post.slug}`} 
+                      key={post.slug} 
+                      className="block group"
+                    >
+                      <article className="bg-white rounded-xl p-5 shadow-sm transition-all duration-300 relative overflow-hidden hover:shadow-md hover:bg-indigo-50/30">
+                        <div className="flex items-start gap-4">
+                          {/* Order Number */}
+                          <div className="flex-shrink-0 w-8 h-8 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center text-sm font-bold group-hover:bg-indigo-100 group-hover:text-indigo-600 transition-colors">
+                            {index + 1}
+                          </div>
+                          
+                          {/* Content */}
+                          <div className="flex-grow min-w-0">
+                            <h3 className="text-base font-bold text-slate-800 mb-1 group-hover:text-indigo-600 transition-colors flex items-center gap-2">
+                              <span>{post.title}</span>
+                              <CaretRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all flex-shrink-0" />
+                            </h3>
+                            <p className="text-sm text-slate-500 leading-relaxed line-clamp-2">
+                              {post.excerpt}
+                            </p>
+                          </div>
+                        </div>
+                      </article>
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            );
+          })
+        )}
       </main>
 
       <Footer />

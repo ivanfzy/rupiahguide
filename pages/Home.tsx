@@ -30,7 +30,7 @@ function Home() {
     sources: []
   });
   const [loading, setLoading] = useState<boolean>(true);
-  const [breakdownMode, setBreakdownMode] = useState<'mixed' | 'large'>('mixed');
+
   
   // --- Modal State ---
   const [modalOpen, setModalOpen] = useState(false);
@@ -118,9 +118,7 @@ function Home() {
   const breakdown = useMemo(() => {
     let remaining = currentIDR;
     const result: { config: typeof IDR_BANKNOTES[0]; count: number }[] = [];
-    const availableNotes = breakdownMode === 'large' 
-      ? IDR_BANKNOTES.filter(n => n.value >= 50000) 
-      : IDR_BANKNOTES;
+    const availableNotes = IDR_BANKNOTES;
 
     for (const note of availableNotes) {
       if (remaining >= note.value) {
@@ -130,7 +128,7 @@ function Home() {
       }
     }
     return result;
-  }, [currentIDR, breakdownMode]);
+  }, [currentIDR]);
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans flex flex-col">
@@ -253,26 +251,11 @@ function Home() {
 
               {/* Visualization Section */}
               <div className="max-w-4xl mx-auto mt-12">
-                 <div className="flex items-center justify-between mb-8 px-4">
+                 <div className="flex items-center justify-center mb-8 px-4">
                    <h2 className="text-xl font-bold text-slate-800 flex items-center gap-2">
                      <Icons.Coins className="w-6 h-6 text-indigo-500" />
                      {t.visualBreakdown}
                    </h2>
-                   
-                   <div className="flex bg-white p-1 rounded-lg border border-slate-200 shadow-sm">
-                      <button 
-                        onClick={() => setBreakdownMode('mixed')}
-                        className={`px-3 py-1.5 text-xs font-semibold rounded-md transition-all ${breakdownMode === 'mixed' ? 'bg-indigo-100 text-indigo-700' : 'text-slate-500 hover:text-slate-700'}`}
-                      >
-                        {t.exactMix}
-                      </button>
-                      <button 
-                        onClick={() => setBreakdownMode('large')}
-                        className={`px-3 py-1.5 text-xs font-semibold rounded-md transition-all ${breakdownMode === 'large' ? 'bg-indigo-100 text-indigo-700' : 'text-slate-500 hover:text-slate-700'}`}
-                      >
-                        {t.bigNotes}
-                      </button>
-                   </div>
                  </div>
 
                  <div className="bg-white rounded-3xl p-8 min-h-[300px] border border-slate-100 shadow-xl shadow-slate-200/50">

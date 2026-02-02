@@ -5,9 +5,10 @@ import { Icons, TRANSLATIONS } from '../../constants';
 interface NavbarProps {
   language: 'en' | 'id';
   setLanguage: (lang: 'en' | 'id') => void;
+  hideLanguageSwitch?: boolean;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ language, setLanguage }) => {
+const Navbar: React.FC<NavbarProps> = ({ language, setLanguage, hideLanguageSwitch }) => {
   const t = TRANSLATIONS[language];
 
   return (
@@ -30,21 +31,23 @@ const Navbar: React.FC<NavbarProps> = ({ language, setLanguage }) => {
              </Link>
           </div>
           
-          {/* Language Switch */}
-          <div className="flex bg-slate-800 rounded-lg p-1">
-            <button 
-              onClick={() => setLanguage('id')}
-              className={`px-2 py-1 text-xs font-bold rounded-sm ${language === 'id' ? 'bg-indigo-600 text-white' : 'text-slate-400 hover:text-white'}`}
-            >
-              ID
-            </button>
-            <button 
-              onClick={() => setLanguage('en')}
-              className={`px-2 py-1 text-xs font-bold rounded-sm ${language === 'en' ? 'bg-indigo-600 text-white' : 'text-slate-400 hover:text-white'}`}
-            >
-              EN
-            </button>
-          </div>
+          {/* Language Switch - Hidden on blog pages */}
+          {!hideLanguageSwitch && (
+            <div className="flex bg-slate-800 rounded-lg p-1">
+              <button 
+                onClick={() => setLanguage('id')}
+                className={`px-2 py-1 text-xs font-bold rounded-sm ${language === 'id' ? 'bg-indigo-600 text-white' : 'text-slate-400 hover:text-white'}`}
+              >
+                ID
+              </button>
+              <button 
+                onClick={() => setLanguage('en')}
+                className={`px-2 py-1 text-xs font-bold rounded-sm ${language === 'en' ? 'bg-indigo-600 text-white' : 'text-slate-400 hover:text-white'}`}
+              >
+                EN
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </nav>

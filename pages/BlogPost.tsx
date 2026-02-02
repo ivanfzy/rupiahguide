@@ -73,7 +73,7 @@ const BlogPost = () => {
         description={meta.excerpt}
         ogType="article"
       />
-      <Navbar language="en" setLanguage={() => {}} />
+      <Navbar language="en" setLanguage={() => {}} hideLanguageSwitch={true} />
 
       <div className="bg-slate-900 text-white py-16 px-6 relative overflow-hidden shrink-0">
          <div className="max-w-4xl mx-auto relative z-10">
