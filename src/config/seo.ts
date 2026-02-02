@@ -1,7 +1,7 @@
 // src/config/seo.ts
 
 export const SEO_CONFIG = {
-  defaultTitle: "RupiahGuide - Indonesia Travel Money Guide",
+  defaultTitle: "RupiahGuide - Indonesia Money Guide",
   titleTemplate: "%s - RupiahGuide",
   description: "Visual guide to Indonesian Rupiah banknotes.",
   url: "https://rupiahguide.com", // Ganti dengan domain asli nanti

@@ -24,9 +24,11 @@ const BanknoteVisual: React.FC<BanknoteVisualProps> = ({ config, className = "",
           alt={config.label}
           className="w-full h-full object-contain"
           style={{ 
-            imageRendering: 'auto', // Revert to standard property to fix TS error
+            imageRendering: 'auto',
           }}
-          onError={() => setImageError(true)} // Fallback to CSS art if image fails to load
+          loading="eager"
+          decoding="async"
+          onError={() => setImageError(true)}
         />
         {/* Optional: Add a subtle border overlay if needed for white banknotes on white backgrounds */}
         <div className="absolute inset-0 rounded-lg border border-black/5 pointer-events-none"></div>

@@ -170,8 +170,8 @@ export const IDR_BANKNOTES: BanknoteConfig[] = [
 
 export const TRANSLATIONS = {
   en: {
-    tabIdr: "I Have IDR Cash",
-    tabForeign: "I Have Foreign Currency",
+    tabIdr: "IDR Cash",
+    tabForeign: "Foreign Currency",
     youHave: "You Have",
     approx: "Approximately",
     visualBreakdown: "Visual Breakdown",
