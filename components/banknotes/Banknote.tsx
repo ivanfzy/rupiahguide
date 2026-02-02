@@ -63,7 +63,7 @@ const Banknote: React.FC<BanknoteProps> = ({ config, count, onClick }) => {
         {/* Count Badge if multiple */}
         {count > 1 && (
           <div 
-            className="absolute -top-4 -right-4 bg-gray-900 text-white font-bold text-sm w-8 h-8 flex items-center justify-center rounded-full shadow-lg z-50 border-2 border-white"
+            className="absolute -top-4 -right-4 bg-stone-800 text-amber-50 font-bold text-sm w-8 h-8 flex items-center justify-center rounded-full shadow-lg z-50 border-2 border-white"
             style={{ transform: `translate(${displayCount * 6}px, ${displayCount * -6}px)`}}
           >
             {count}x
@@ -74,16 +74,16 @@ const Banknote: React.FC<BanknoteProps> = ({ config, count, onClick }) => {
       {/* Label and Audio Control */}
       <div className="mt-4 flex flex-col items-center gap-1">
         <div className="flex items-center gap-2">
-           <span className="text-sm font-bold text-gray-800">{config.label}</span>
+           <span className="text-sm font-bold text-stone-800">{config.label}</span>
            <button 
              onClick={playAudio}
-             className="p-1 rounded-full hover:bg-slate-100 text-indigo-500 transition-colors"
+             className="p-1 rounded-full hover:bg-orange-500/10 text-orange-500 transition-colors"
              title="Listen to pronunciation"
            >
              <Icons.Speaker />
            </button>
         </div>
-        <span className="text-xs text-slate-500 italic">"{config.englishLabel}"</span>
+        <span className="text-xs text-stone-500 italic">"{config.englishLabel}"</span>
       </div>
     </div>
   );

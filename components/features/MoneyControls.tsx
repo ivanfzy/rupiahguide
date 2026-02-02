@@ -40,15 +40,15 @@ const MoneyControls: React.FC<MoneyControlsProps> = ({ amount, setAmount, curren
   };
 
   return (
-    <div className="bg-white rounded-3xl shadow-xl p-6 md:p-8 w-full max-w-xl mx-auto border border-slate-100 relative z-10">
+    <div className="bg-white rounded-3xl shadow-xl p-6 md:p-8 w-full max-w-xl mx-auto border border-stone-300/30 relative z-10">
       
       {/* Input Display */}
       <div className="flex flex-col items-center justify-center mb-8">
-        <label className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-2">
+        <label className="text-sm font-semibold text-stone-500 uppercase tracking-wider mb-2">
           {t.youHave}
         </label>
         <div className="relative flex items-center justify-center w-full font-mono">
-            <span className="text-4xl md:text-5xl font-bold text-slate-800 mr-2 flex items-center gap-2">
+            <span className="text-4xl md:text-5xl font-bold text-stone-800 mr-2 flex items-center gap-2">
               <span className={`${currency.flag} rounded-md shadow-sm text-3xl md:text-4xl`}></span>
               {currency.symbol}
             </span>
@@ -56,11 +56,11 @@ const MoneyControls: React.FC<MoneyControlsProps> = ({ amount, setAmount, curren
               type="number"
               value={amount === 0 ? '' : amount}
               onChange={handleInputChange}
-              className="w-40 text-4xl md:text-5xl font-bold text-slate-900 bg-transparent border-b-2 border-dashed border-slate-300 focus:border-indigo-500 outline-none text-center placeholder-slate-200 transition-colors font-mono"
+              className="w-40 text-4xl md:text-5xl font-bold text-stone-800 bg-transparent border-b-2 border-dashed border-stone-300/50 focus:border-orange-500 outline-none text-center placeholder-stone-300/30 transition-colors font-mono"
               placeholder="0"
             />
         </div>
-        <div className="text-sm text-slate-500 font-medium mt-2">
+        <div className="text-sm text-stone-600 font-medium mt-2">
            {currency.name}
         </div>
       </div>
@@ -71,7 +71,7 @@ const MoneyControls: React.FC<MoneyControlsProps> = ({ amount, setAmount, curren
           <button
             key={val}
             onClick={() => quickAdd(val)}
-            className="px-4 py-2 rounded-full bg-slate-50 text-slate-600 font-semibold text-sm hover:bg-indigo-50 hover:text-indigo-600 transition-colors border border-slate-200 active:scale-95"
+            className="px-4 py-2 rounded-full bg-stone-200 text-stone-600 font-semibold text-sm hover:bg-orange-500/10 hover:text-orange-500 transition-colors border border-stone-300/30 active:scale-95"
           >
             +{val}
           </button>
@@ -85,14 +85,14 @@ const MoneyControls: React.FC<MoneyControlsProps> = ({ amount, setAmount, curren
       </div>
 
       {/* Result Display */}
-      <div className="bg-gradient-to-br from-indigo-600 to-indigo-800 rounded-2xl p-6 text-white text-center shadow-lg shadow-indigo-200">
-        <label className="text-xs font-bold text-indigo-200 uppercase tracking-widest mb-1 block">
+      <div className="bg-gradient-to-br from-orange-500 to-orange-700 rounded-2xl p-6 text-white text-center shadow-lg shadow-orange-500/20">
+        <label className="text-xs font-bold text-white/70 uppercase tracking-widest mb-1 block">
           {t.approx}
         </label>
         <div className="text-3xl md:text-4xl font-bold truncate font-mono">
           {formatIDR(convertedValue)}
         </div>
-        <div className="mt-2 text-indigo-200 text-xs font-medium bg-indigo-900/30 inline-block px-3 py-1 rounded-full font-mono">
+        <div className="mt-2 text-white/70 text-xs font-medium bg-stone-800/20 inline-block px-3 py-1 rounded-full font-mono">
           1 {currency.code} ≈ {formatIDR(rate)}
         </div>
       </div>

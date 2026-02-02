@@ -117,14 +117,15 @@ const Blog = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans flex flex-col">
+    <div className="min-h-screen bg-stone-100 text-stone-800 font-sans flex flex-col">
       <Navbar language="en" setLanguage={() => {}} hideLanguageSwitch={true} />
 
-      <div className="bg-slate-900 text-white pb-16 pt-10 px-6 shadow-2xl relative overflow-hidden shrink-0 mb-8">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500 rounded-full mix-blend-overlay filter blur-3xl opacity-20 -translate-y-1/2 translate-x-1/2"></div>
+      <div className="bg-gradient-to-br from-stone-200 via-stone-300/50 to-stone-200 text-stone-800 pb-16 pt-10 px-6 shadow-lg relative overflow-hidden shrink-0 mb-8 border-b border-stone-300/50">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-orange-400/10 rounded-full mix-blend-multiply filter blur-3xl opacity-40 -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-stone-400/10 rounded-full mix-blend-multiply filter blur-3xl opacity-40 translate-y-1/2 -translate-x-1/3 pointer-events-none"></div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">RupiahGuide Blog</h1>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+          <p className="text-stone-600 text-lg max-w-2xl mx-auto">
             Essential guides to help you navigate money matters in Indonesia. 
             Start from the basics.
           </p>
@@ -138,23 +139,23 @@ const Blog = () => {
             {[1, 2, 3].map((skeletonGroup) => (
               <section key={skeletonGroup} className="space-y-4">
                 {/* Category Header Skeleton */}
-                <div className="flex items-center gap-3 pb-2 border-b border-slate-200">
-                  <div className="p-2 bg-slate-200 rounded-lg w-10 h-10 animate-pulse"></div>
+                <div className="flex items-center gap-3 pb-2 border-b border-stone-200">
+                  <div className="p-2 bg-stone-200 rounded-lg w-10 h-10 animate-pulse"></div>
                   <div className="space-y-2">
-                    <div className="h-5 w-32 bg-slate-200 rounded animate-pulse"></div>
-                    <div className="h-3 w-48 bg-slate-200 rounded animate-pulse"></div>
+                    <div className="h-5 w-32 bg-stone-200 rounded animate-pulse"></div>
+                    <div className="h-3 w-48 bg-stone-200 rounded animate-pulse"></div>
                   </div>
                 </div>
                 
                 {/* Posts Skeleton */}
                 <div className="space-y-3">
                   {[1, 2, 3].map((skeletonPost) => (
-                    <div key={skeletonPost} className="bg-white rounded-xl p-5 shadow-sm">
+                    <div key={skeletonPost} className="bg-white rounded-xl p-5 shadow-sm border border-amber-100">
                       <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-slate-200 animate-pulse"></div>
+                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-stone-200 animate-pulse"></div>
                         <div className="flex-grow min-w-0 space-y-2">
-                          <div className="h-5 w-3/4 bg-slate-200 rounded animate-pulse"></div>
-                          <div className="h-4 w-full bg-slate-200 rounded animate-pulse"></div>
+                          <div className="h-5 w-3/4 bg-stone-200 rounded animate-pulse"></div>
+                          <div className="h-4 w-full bg-stone-200 rounded animate-pulse"></div>
                         </div>
                       </div>
                     </div>
@@ -173,15 +174,15 @@ const Blog = () => {
             return (
               <section key={categoryKey} className="space-y-4">
                 {/* Category Header */}
-                <div className="flex items-center gap-3 pb-2 border-b border-slate-200">
-                  <div className="p-2 bg-indigo-100 text-indigo-600 rounded-lg">
+                <div className="flex items-center gap-3 pb-2 border-b border-stone-200">
+                  <div className="p-2 bg-orange-100 text-orange-600 rounded-lg">
                     {categoryInfo.icon}
                   </div>
                   <div>
-                    <h2 className="text-lg font-bold text-slate-800">
+                    <h2 className="text-lg font-bold text-stone-800">
                       {categoryInfo.label}
                     </h2>
-                    <p className="text-xs text-slate-500">
+                    <p className="text-xs text-stone-500">
                       {categoryInfo.description}
                     </p>
                   </div>
@@ -195,20 +196,20 @@ const Blog = () => {
                       key={post.slug} 
                       className="block group"
                     >
-                      <article className="bg-white rounded-xl p-5 shadow-sm transition-all duration-300 relative overflow-hidden hover:bg-indigo-50/30">
+                      <article className="bg-white rounded-xl p-5 shadow-sm transition-all duration-300 relative overflow-hidden hover:shadow-md hover:bg-orange-50/30">
                         <div className="flex items-start gap-4">
                           {/* Order Number */}
-                          <div className="flex-shrink-0 w-8 h-8 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center text-sm font-bold group-hover:bg-indigo-100 group-hover:text-indigo-600 transition-colors">
+                          <div className="flex-shrink-0 w-8 h-8 rounded-full bg-amber-100 text-stone-500 flex items-center justify-center text-sm font-bold group-hover:bg-orange-100 group-hover:text-orange-600 transition-colors">
                             {index + 1}
                           </div>
                           
                           {/* Content */}
                           <div className="flex-grow min-w-0">
-                            <h3 className="text-base font-bold text-slate-800 mb-1 group-hover:text-indigo-600 transition-colors flex items-center gap-2">
+                            <h3 className="text-base font-bold text-stone-800 mb-1 group-hover:text-orange-600 transition-colors flex items-center gap-2">
                               <span>{post.title}</span>
                               <CaretRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all flex-shrink-0" />
                             </h3>
-                            <p className="text-sm text-slate-500 leading-relaxed line-clamp-2">
+                            <p className="text-sm text-stone-500 leading-relaxed line-clamp-2">
                               {post.excerpt}
                             </p>
                           </div>

@@ -67,7 +67,7 @@ const BanknoteModal: React.FC<BanknoteModalProps> = ({ isOpen, onClose, config, 
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Backdrop */}
       <div 
-        className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity"
+        className="absolute inset-0 bg-stone-800/40 backdrop-blur-sm transition-opacity"
         onClick={onClose}
       ></div>
 
@@ -76,7 +76,7 @@ const BanknoteModal: React.FC<BanknoteModalProps> = ({ isOpen, onClose, config, 
         {/* Close Button */}
         <button 
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 bg-slate-100/80 backdrop-blur rounded-full text-slate-500 hover:bg-slate-200 transition-colors z-30"
+          className="absolute top-4 right-4 p-2 bg-stone-300/30 backdrop-blur rounded-full text-stone-600 hover:bg-stone-300/50 transition-colors z-30"
         >
           <Icons.X />
         </button>
@@ -138,8 +138,8 @@ const BanknoteModal: React.FC<BanknoteModalProps> = ({ isOpen, onClose, config, 
 
         {/* Controls Bar: Edition Selector */}
         {config.variants && config.variants.length > 0 && (
-          <div className="px-6 py-3 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
-             <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">{t.edition}</span>
+          <div className="px-6 py-3 bg-stone-200/30 border-b border-stone-300/20 flex items-center justify-between">
+             <span className="text-xs font-bold text-stone-500 uppercase tracking-wider">{t.edition}</span>
              <div className="flex gap-2">
                 {config.variants.map(v => (
                   <button
@@ -147,8 +147,8 @@ const BanknoteModal: React.FC<BanknoteModalProps> = ({ isOpen, onClose, config, 
                     onClick={() => setSelectedYear(v.year)}
                     className={`px-3 py-1 rounded-full text-xs font-bold transition-all border ${
                       selectedYear === v.year 
-                        ? 'bg-indigo-600 text-white border-indigo-600 shadow-md' 
-                        : 'bg-white text-slate-500 border-slate-200 hover:border-slate-300'
+                        ? 'bg-orange-500 text-white border-orange-500 shadow-md' 
+                        : 'bg-white text-stone-600 border-stone-300 hover:border-orange-500/50'
                     }`}
                   >
                     {v.year}
@@ -162,42 +162,42 @@ const BanknoteModal: React.FC<BanknoteModalProps> = ({ isOpen, onClose, config, 
         <div className="p-6 overflow-y-auto hide-scrollbar">
           <div className="flex justify-between items-start mb-4">
             <div>
-               <h3 className="text-2xl font-bold text-slate-800">{config.label}</h3>
-               <p className="text-sm text-slate-400 italic">{config.englishLabel}</p>
+               <h3 className="text-2xl font-bold text-stone-800">{config.label}</h3>
+               <p className="text-sm text-stone-500 italic">{config.englishLabel}</p>
             </div>
             <button 
              onClick={playAudio}
-             className="p-3 rounded-full bg-indigo-50 text-indigo-600 hover:bg-indigo-100 transition-colors"
+             className="p-3 rounded-full bg-orange-500/10 text-orange-500 hover:bg-orange-500/20 transition-colors"
              title="Listen to pronunciation"
            >
              <Icons.Speaker />
            </button>
           </div>
 
-          <p className="text-slate-600 text-sm leading-relaxed mb-6 bg-slate-50 p-4 rounded-xl border border-slate-100">
+          <p className="text-stone-600 text-sm leading-relaxed mb-6 bg-stone-200/30 p-4 rounded-xl border border-stone-300/20">
             {config.description}
           </p>
 
           {/* Total Calculation - Only show if count > 1 */}
           {count > 1 && (
-             <div className="mt-2 p-4 rounded-2xl bg-gradient-to-r from-slate-50 to-indigo-50/50 border border-indigo-100/50">
+             <div className="mt-2 p-4 rounded-2xl bg-gradient-to-r from-stone-200/30 to-orange-500/10 border border-orange-500/20">
                <div className="flex justify-between items-end">
                  {/* Left: Calculation Logic */}
                  <div className="flex flex-col gap-1">
                     <div className="flex items-center gap-1.5">
-                       <span className="bg-white px-2.5 py-1 rounded-lg shadow-sm border border-slate-200 font-bold text-slate-700 text-sm">
-                          {count} <span className="text-slate-400 font-normal text-xs">sheets</span>
+                       <span className="bg-white px-2.5 py-1 rounded-lg shadow-sm border border-stone-300/30 font-bold text-stone-800 text-sm">
+                          {count} <span className="text-stone-400 font-normal text-xs">sheets</span>
                        </span>
-                       <span className="text-slate-300 text-xs">×</span>
-                       <span className="font-bold text-slate-600 text-sm">{config.shortLabel}</span>
+                       <span className="text-stone-400 text-xs">×</span>
+                       <span className="font-bold text-stone-700 text-sm">{config.shortLabel}</span>
                     </div>
                  </div>
 
                  {/* Right: Result */}
                  <div className="text-right">
-                    <div className="text-2xl font-extrabold text-indigo-600 leading-none tracking-tight">
+                    <div className="text-2xl font-extrabold text-orange-500 leading-none tracking-tight">
                        {totalValue.toLocaleString('id-ID')}
-                       <span className="text-sm font-bold text-indigo-300 ml-1">IDR</span>
+                       <span className="text-sm font-bold text-orange-500/50 ml-1">IDR</span>
                     </div>
                  </div>
                </div>
@@ -205,8 +205,8 @@ const BanknoteModal: React.FC<BanknoteModalProps> = ({ isOpen, onClose, config, 
           )}
         </div>
         
-        <div className="p-4 bg-slate-50 border-t border-slate-100 flex justify-center shrink-0">
-           <button onClick={onClose} className="text-sm font-bold text-slate-500 hover:text-slate-800 transition-colors">
+        <div className="p-4 bg-stone-200/30 border-t border-stone-300/20 flex justify-center shrink-0">
+           <button onClick={onClose} className="text-sm font-bold text-stone-600 hover:text-stone-800 transition-colors">
              {t.close}
            </button>
         </div>

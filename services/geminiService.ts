@@ -11,6 +11,47 @@ import { ALL_AVAILABLE_CURRENCIES } from "../constants";
 
 let ai: GoogleGenAI | null = null;
 
+// Cache configuration
+const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes in milliseconds
+
+interface CachedRate {
+  rate: number;
+  timestamp: number;
+  sources: string[];
+}
+
+// Get cached rate from sessionStorage
+const getCachedRate = (currencyCode: string): CachedRate | null => {
+  try {
+    const cached = sessionStorage.getItem(`rate_${currencyCode}`);
+    if (cached) {
+      const data: CachedRate = JSON.parse(cached);
+      if (Date.now() - data.timestamp < CACHE_DURATION) {
+        return data;
+      }
+      // Expired, remove it
+      sessionStorage.removeItem(`rate_${currencyCode}`);
+    }
+  } catch (e) {
+    console.warn("Cache read error:", e);
+  }
+  return null;
+};
+
+// Set cached rate to sessionStorage
+const setCachedRate = (currencyCode: string, rate: number, sources: string[]) => {
+  try {
+    const data: CachedRate = {
+      rate,
+      timestamp: Date.now(),
+      sources
+    };
+    sessionStorage.setItem(`rate_${currencyCode}`, JSON.stringify(data));
+  } catch (e) {
+    console.warn("Cache write error:", e);
+  }
+};
+
 const initAI = () => {
   if (ai) return ai;
   
@@ -138,7 +179,19 @@ const fetchAllOpenAPIRates = async (): Promise<RateMap | null> => {
   }
 };
 
-export const fetchLiveRate = async (currencyCode: string): Promise<ConversionData> => {
+export const fetchLiveRate = async (currencyCode: string, forceRefresh = false): Promise<ConversionData> => {
+  // 0. Check cache first (if not forcing refresh)
+  if (!forceRefresh) {
+    const cached = getCachedRate(currencyCode);
+    if (cached) {
+      return {
+        rate: cached.rate,
+        lastUpdated: new Date(cached.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + ' (cached)',
+        sources: cached.sources
+      };
+    }
+  }
+
   const genAI = initAI();
   
   // 1. Try Gemini API
@@ -178,6 +231,9 @@ export const fetchLiveRate = async (currencyCode: string): Promise<ConversionDat
           });
         }
 
+        // Cache the result
+        setCachedRate(currencyCode, data.rate, sources);
+
         return {
           rate: data.rate,
           lastUpdated: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
@@ -192,6 +248,7 @@ export const fetchLiveRate = async (currencyCode: string): Promise<ConversionDat
   // 2. Try Open API Fallback
   const openRate = await fetchOpenAPIRate(currencyCode);
   if (openRate) {
+    setCachedRate(currencyCode, openRate, ['currency-api']);
     return {
       rate: openRate,
       lastUpdated: 'Open API',

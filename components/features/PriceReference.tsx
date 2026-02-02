@@ -35,21 +35,21 @@ const PriceReference: React.FC<PriceReferenceProps> = ({ amountIDR }) => {
   const displayItems = affordableItems.slice().reverse().slice(0, 4);
 
   return (
-    <div className="mt-8 bg-indigo-50/50 rounded-3xl p-6 border border-indigo-100">
-      <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4 flex items-center gap-2">
+    <div className="mt-8 bg-orange-500/5 rounded-3xl p-6 border border-orange-500/20">
+      <h3 className="text-sm font-bold text-stone-500 uppercase tracking-wider mb-4 flex items-center gap-2">
         <span className="text-lg">🛒</span> Purchasing Power Context
       </h3>
       <div className="grid grid-cols-2 gap-4">
         {displayItems.map((item) => {
           const quantity = Math.floor(amountIDR / item.price);
           return (
-            <div key={item.name} className="flex items-center gap-3 bg-white p-3 rounded-xl border border-indigo-50 shadow-sm">
+            <div key={item.name} className="flex items-center gap-3 bg-white p-3 rounded-xl border border-orange-500/10 shadow-sm">
               <div className="text-2xl">{item.emoji}</div>
               <div className="flex flex-col">
-                <span className="font-bold text-slate-800 leading-tight">
+                <span className="font-bold text-stone-800 leading-tight">
                   {quantity}x {item.name}
                 </span>
-                <span className="text-[10px] text-slate-400 font-medium">
+                <span className="text-[10px] text-stone-500 font-medium">
                   @ {item.price.toLocaleString('id-ID')} IDR
                 </span>
               </div>
@@ -57,7 +57,7 @@ const PriceReference: React.FC<PriceReferenceProps> = ({ amountIDR }) => {
           );
         })}
       </div>
-      <p className="text-[10px] text-slate-400 mt-3 text-center italic">
+      <p className="text-[10px] text-stone-500 mt-3 text-center italic">
         *Average prices in tourist areas (Bali/Jakarta).
       </p>
     </div>

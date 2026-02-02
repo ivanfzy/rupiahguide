@@ -11,12 +11,13 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
       <div
         ref={ref}
         className={cn(
-          "bg-slate-900 text-white px-6 shadow-2xl relative overflow-hidden shrink-0 transition-all duration-300",
+          "bg-gradient-to-br from-stone-200 via-stone-300/50 to-stone-200 text-stone-800 px-6 shadow-lg relative overflow-hidden shrink-0 transition-all duration-300 border-b border-stone-300/50",
           className
         )}
         {...props}
       >
-        <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500 rounded-full mix-blend-overlay filter blur-3xl opacity-20 -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-orange-400/10 rounded-full mix-blend-multiply filter blur-3xl opacity-40 -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-stone-400/10 rounded-full mix-blend-multiply filter blur-3xl opacity-40 translate-y-1/2 -translate-x-1/3 pointer-events-none"></div>
         {children}
       </div>
     );

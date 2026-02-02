@@ -24,23 +24,23 @@ const BanknoteControl: React.FC<BanknoteControlProps> = ({ config, count, onIncr
 
       {/* Label and Value */}
       <div className="flex-grow px-4">
-        <div className="font-bold text-slate-800 text-sm">{config.label}</div>
-        <div className="text-xs text-slate-400 font-mono">Rp {config.value.toLocaleString('id-ID')}</div>
+        <div className="font-bold text-stone-800 text-sm">{config.label}</div>
+        <div className="text-xs text-stone-500 font-mono">Rp {config.value.toLocaleString('id-ID')}</div>
       </div>
 
       {/* Controls */}
-      <div className="flex items-center gap-3 bg-slate-50 p-1 rounded-xl">
+      <div className="flex items-center gap-3 bg-stone-200/50 p-1 rounded-xl">
         <button 
           onClick={onDecrement}
           disabled={count === 0}
-          className="w-8 h-8 flex items-center justify-center rounded-lg bg-white text-slate-600 shadow-sm border border-slate-200 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-slate-100 hover:text-indigo-600 transition-colors"
+          className="w-8 h-8 flex items-center justify-center rounded-lg bg-white text-stone-600 shadow-sm border border-stone-300/30 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-stone-200 hover:text-orange-500 transition-colors"
         >
           <Icons.Minus className="w-4 h-4" />
         </button>
-        <span className="w-6 text-center font-bold text-slate-700 font-mono">{count}</span>
+        <span className="w-6 text-center font-bold text-stone-800 font-mono">{count}</span>
         <button 
           onClick={onIncrement}
-          className="w-8 h-8 flex items-center justify-center rounded-lg bg-indigo-600 text-white shadow-sm shadow-indigo-200 hover:bg-indigo-700 transition-colors"
+          className="w-8 h-8 flex items-center justify-center rounded-lg bg-orange-500 text-white shadow-sm shadow-orange-500/20 hover:bg-orange-600 transition-colors"
         >
           <Icons.Plus className="w-4 h-4" />
         </button>
