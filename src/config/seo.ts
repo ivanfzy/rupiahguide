@@ -8,6 +8,7 @@ export const SEO_CONFIG = {
   siteName: "RupiahGuide",
   twitter: {
     cardType: "summary_large_image",
+    handle: "@rupiahguide",
   },
   openGraph: {
     type: "website",

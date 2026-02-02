@@ -171,7 +171,7 @@ const Blog = () => {
                         {/* Content */}
                         <div className="flex-grow min-w-0">
                           <h3 className="text-base font-bold text-slate-800 mb-1 group-hover:text-indigo-600 transition-colors flex items-center gap-2">
-                            <span className="truncate">{post.title}</span>
+                            <span>{post.title}</span>
                             <CaretRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all flex-shrink-0" />
                           </h3>
                           <p className="text-sm text-slate-500 leading-relaxed line-clamp-2">
