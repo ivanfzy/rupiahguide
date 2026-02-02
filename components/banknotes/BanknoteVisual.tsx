@@ -18,7 +18,7 @@ const BanknoteVisual: React.FC<BanknoteVisualProps> = ({ config, className = "",
   // --- RENDER JPG IMAGE (Primary) ---
   if (!imageError) {
     return (
-      <div className={`relative overflow-hidden rounded-sm shadow-sm select-none bg-white ${className}`}>
+      <div className={`relative overflow-hidden select-none bg-white ${className}`}>
         <img 
           src={imagePath}
           alt={config.label}
@@ -30,8 +30,6 @@ const BanknoteVisual: React.FC<BanknoteVisualProps> = ({ config, className = "",
           decoding="async"
           onError={() => setImageError(true)}
         />
-        {/* Optional: Add a subtle border overlay if needed for white banknotes on white backgrounds */}
-        <div className="absolute inset-0 rounded-lg border border-black/5 pointer-events-none"></div>
       </div>
     );
   }

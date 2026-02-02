@@ -195,7 +195,7 @@ const Blog = () => {
                       key={post.slug} 
                       className="block group"
                     >
-                      <article className="bg-white rounded-xl p-5 shadow-sm transition-all duration-300 relative overflow-hidden hover:shadow-md hover:bg-indigo-50/30">
+                      <article className="bg-white rounded-xl p-5 shadow-sm transition-all duration-300 relative overflow-hidden hover:bg-indigo-50/30">
                         <div className="flex items-start gap-4">
                           {/* Order Number */}
                           <div className="flex-shrink-0 w-8 h-8 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center text-sm font-bold group-hover:bg-indigo-100 group-hover:text-indigo-600 transition-colors">

@@ -260,9 +260,19 @@ function Home() {
 
                  <div className="bg-white rounded-3xl p-8 min-h-[300px] border border-slate-100 shadow-xl shadow-slate-200/50">
                     {amount === 0 ? (
-                      <div className="h-full flex flex-col items-center justify-center text-slate-300 py-12">
-                         <div className="w-16 h-16 mb-4 opacity-50"><Icons.Wallet /></div>
-                         <p>{t.enterAmount}</p>
+                      <div className="h-full flex flex-col items-center justify-center text-slate-400 py-16 px-4 text-center">
+                         <div className="w-24 h-24 mb-6 bg-slate-100 rounded-full flex items-center justify-center">
+                           <Icons.Wallet className="w-12 h-12 text-slate-300" />
+                         </div>
+                         <h3 className="text-xl font-bold text-slate-700 mb-2">Ready to Visualize</h3>
+                         <p className="max-w-md mx-auto leading-relaxed text-slate-500">
+                           {t.enterAmount}
+                         </p>
+                         <div className="mt-8 flex gap-3 text-sm text-slate-400">
+                            <span className="flex items-center gap-1"><Icons.Plus className="w-4 h-4" /> Add Amount</span>
+                            <span className="w-px h-4 bg-slate-300"></span>
+                            <span className="flex items-center gap-1"><Icons.Money className="w-4 h-4" /> See Rupiah</span>
+                         </div>
                       </div>
                     ) : (
                       <>

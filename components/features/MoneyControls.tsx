@@ -20,12 +20,14 @@ const MoneyControls: React.FC<MoneyControlsProps> = ({ amount, setAmount, curren
     else if (e.target.value === '') setAmount(0);
   }, [setAmount]);
 
-  const handleSliderChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    setAmount(parseFloat(e.target.value));
-  }, [setAmount]);
-
   const quickAdd = useCallback((val: number) => {
-    setAmount(prev => Math.max(0, prev + val));
+    // Check if setAmount accepts a function update (like useState's setter)
+    // We cast to any here because we know it's safe if it comes from useState
+    // but the type definition above is a union that makes TS unhappy about calling it with a function
+    if (typeof setAmount === 'function') {
+        // @ts-ignore - handling both direct setter and state updater patterns
+        setAmount((prev: number) => Math.max(0, prev + val));
+    }
   }, [setAmount]);
 
   // Format IDR for display
@@ -36,9 +38,6 @@ const MoneyControls: React.FC<MoneyControlsProps> = ({ amount, setAmount, curren
       maximumFractionDigits: 0
     }).format(val);
   };
-
-  // Helper to determine dynamic max for slider based on current input
-  const sliderMax = Math.max(500, Math.ceil(amount / 100) * 100 + 100);
 
   return (
     <div className="bg-white rounded-3xl shadow-xl p-6 md:p-8 w-full max-w-xl mx-auto border border-slate-100 relative z-10">
@@ -64,19 +63,6 @@ const MoneyControls: React.FC<MoneyControlsProps> = ({ amount, setAmount, curren
         <div className="text-sm text-slate-500 font-medium mt-2">
            {currency.name}
         </div>
-      </div>
-
-      {/* Slider */}
-      <div className="mb-8 px-2">
-        <input
-          type="range"
-          min="0"
-          max={sliderMax}
-          step="5"
-          value={amount}
-          onChange={handleSliderChange}
-          className="w-full h-3 bg-slate-100 rounded-lg cursor-pointer accent-indigo-600 hover:accent-indigo-500 transition-all"
-        />
       </div>
 
       {/* Quick Add Buttons */}
