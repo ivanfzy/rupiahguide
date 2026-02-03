@@ -11,9 +11,29 @@ interface BanknoteModalProps {
   language: 'en' | 'id';
 }
 
+// Pre-warm speech synthesis to reduce first-play delay
+const warmUpSpeechSynthesis = () => {
+  if ('speechSynthesis' in window) {
+    const voices = window.speechSynthesis.getVoices();
+    // If voices not loaded yet, listen for the event
+    if (voices.length === 0) {
+      window.speechSynthesis.onvoiceschanged = () => {
+        window.speechSynthesis.getVoices();
+      };
+    }
+  }
+};
+
 const BanknoteModal: React.FC<BanknoteModalProps> = ({ isOpen, onClose, config, count, language }) => {
   const [selectedYear, setSelectedYear] = useState<number>(0);
   const [isFlipped, setIsFlipped] = useState(false);
+  
+  // Pre-warm speech synthesis when modal opens
+  useEffect(() => {
+    if (isOpen) {
+      warmUpSpeechSynthesis();
+    }
+  }, [isOpen]);
   
   // Reset state when modal opens or config changes
   useEffect(() => {

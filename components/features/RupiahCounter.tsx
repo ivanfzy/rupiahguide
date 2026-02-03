@@ -126,8 +126,8 @@ const RupiahCounter: React.FC<RupiahCounterProps> = ({ popularRates, lastUpdated
       <CardOverlap 
         className="-mt-14 mx-4"
       >
-        <div className="bg-white rounded-3xl p-6 shadow-xl border border-stone-300/30 text-center">
-          <label className="text-sm font-semibold text-stone-500 uppercase tracking-wider mb-2 block">
+        <div className="bg-white rounded-3xl p-6 shadow-sm border border-stone-200/50 text-center">
+          <label className="text-sm font-medium text-stone-400 mb-2 block">
           {t.totalCash}
         </label>
         <div className="flex items-center justify-center gap-2 font-mono">

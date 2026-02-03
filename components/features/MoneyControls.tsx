@@ -40,11 +40,11 @@ const MoneyControls: React.FC<MoneyControlsProps> = ({ amount, setAmount, curren
   };
 
   return (
-    <div className="bg-white rounded-3xl shadow-xl p-6 md:p-8 w-full max-w-xl mx-auto border border-stone-300/30 relative z-10">
+    <div className="bg-white rounded-3xl shadow-sm p-6 md:p-8 w-full max-w-xl mx-auto border border-stone-200/50 relative z-10">
       
       {/* Input Display */}
       <div className="flex flex-col items-center justify-center mb-8">
-        <label className="text-sm font-semibold text-stone-500 uppercase tracking-wider mb-2">
+        <label className="text-sm font-medium text-stone-400 mb-2 block">
           {t.youHave}
         </label>
         <div className="relative flex items-center justify-center w-full font-mono">
@@ -78,15 +78,15 @@ const MoneyControls: React.FC<MoneyControlsProps> = ({ amount, setAmount, curren
         ))}
          <button
             onClick={() => setAmount(0)}
-            className="px-4 py-2 rounded-full bg-red-50 text-red-600 font-semibold text-sm hover:bg-red-100 transition-colors border border-red-100 active:scale-95"
+            className="px-4 py-2 rounded-full bg-red-50 text-red-600 font-semibold text-sm hover:bg-red-100 transition-colors border border-red-100 active:scale-95 flex items-center gap-1"
           >
-            {t.clear}
+            <Icons.Trash className="w-4 h-4" /> {t.clear}
           </button>
       </div>
 
       {/* Result Display */}
       <div className="bg-gradient-to-br from-orange-500 to-orange-700 rounded-2xl p-6 text-white text-center shadow-lg shadow-orange-500/20">
-        <label className="text-xs font-bold text-white/70 uppercase tracking-widest mb-1 block">
+        <label className="text-xs font-medium text-white/60 mb-1 block">
           {t.approx}
         </label>
         <div className="text-3xl md:text-4xl font-bold truncate font-mono">

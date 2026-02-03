@@ -175,14 +175,25 @@ function Home() {
   return (
     <div className="min-h-screen bg-stone-100 text-stone-800 font-sans flex flex-col">
       <SEOHead 
-        title="Indonesia Travel Money Guide" 
+        title="Indonesia Travel Money Guide"
+        canonicalPath="/"
         schema={SCHEMA_ORG.website}
       />
       
       <Navbar language={language} setLanguage={setLanguage} />
 
       {/* Hero / Tab Background */}
-      <HeroSection className="pb-18 pt-10">
+      <HeroSection className="pb-18 pt-8">
+        
+        {/* Hero Description */}
+        <div className="text-center mb-6 px-4">
+          <h1 className="text-stone-800 text-4xl md:text-5xl font-bold max-w-lg mx-auto mb-4">
+            RupiahGuide
+          </h1>
+          <h2 className="text-stone-700 text-lg md:text-xl font-semibold max-w-lg mx-auto mb-2">
+            {t.heroDescription}
+          </h2>
+        </div>
         
         {/* Tab Navigation */}
         <div 
@@ -295,10 +306,10 @@ function Home() {
               {/* Visualization Section */}
               <div className="max-w-4xl mx-auto mt-12">
                  <div className="flex items-center justify-center mb-8 px-4">
-                   <h2 className="text-xl font-bold text-stone-800 flex items-center gap-2">
+                   <h3 className="text-xl font-bold text-stone-800 flex items-center gap-2">
                      <Icons.Coins className="w-6 h-6 text-orange-500" />
                      {t.visualBreakdown}
-                   </h2>
+                   </h3>
                  </div>
 
                  <div className="bg-white rounded-3xl p-8 min-h-[300px] border border-amber-100 shadow-xl shadow-amber-100/50">
@@ -307,7 +318,7 @@ function Home() {
                          <div className="w-24 h-24 mb-6 bg-amber-100 rounded-full flex items-center justify-center">
                            <Icons.Wallet className="w-12 h-12 text-amber-300" />
                          </div>
-                         <h3 className="text-xl font-bold text-stone-700 mb-2">Ready to Visualize</h3>
+                         <h4 className="text-xl font-bold text-stone-700 mb-2">Ready to Visualize</h4>
                          <p className="max-w-md mx-auto leading-relaxed text-stone-500">
                            {t.enterAmount}
                          </p>

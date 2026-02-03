@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import SEOHead from '../components/seo/SEOHead';
+import { createBreadcrumbSchema, createWebsiteSchema } from '@/config/seo';
 import matter from 'gray-matter';
 import { 
   BookOpen, 
@@ -120,8 +121,16 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-stone-100 text-stone-800 font-sans flex flex-col">
       <SEOHead 
-        title="Blog - Essential Guides for Indonesia Travel Money" 
+        title="Blog - Essential Guides for Indonesia Travel Money"
         description="Essential guides to help you navigate money matters in Indonesia. Learn about Rupiah basics, budgeting, ATM, and more."
+        canonicalPath="/blog"
+        schema={{
+          ...createWebsiteSchema(),
+          ...createBreadcrumbSchema([
+            { name: "Home", url: "https://rupiahguide.com/" },
+            { name: "Blog", url: "https://rupiahguide.com/blog" },
+          ])
+        }}
       />
       <Navbar language="en" setLanguage={() => {}} hideLanguageSwitch={true} />
 

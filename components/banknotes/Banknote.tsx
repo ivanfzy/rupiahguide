@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { BanknoteConfig } from '../../types';
 import { Icons } from '../../constants';
 import BanknoteVisual from './BanknoteVisual';
@@ -9,7 +9,25 @@ interface BanknoteProps {
   onClick?: (config: BanknoteConfig, count: number) => void;
 }
 
+// Pre-warm speech synthesis to reduce first-play delay
+const warmUpSpeechSynthesis = () => {
+  if ('speechSynthesis' in window) {
+    const voices = window.speechSynthesis.getVoices();
+    // If voices not loaded yet, listen for the event
+    if (voices.length === 0) {
+      window.speechSynthesis.onvoiceschanged = () => {
+        window.speechSynthesis.getVoices();
+      };
+    }
+  }
+};
+
 const Banknote: React.FC<BanknoteProps> = ({ config, count, onClick }) => {
+  // Pre-warm on mount
+  useEffect(() => {
+    warmUpSpeechSynthesis();
+  }, []);
+
   if (count === 0) return null;
 
   // Reduced visual stack limit from 5 to 3

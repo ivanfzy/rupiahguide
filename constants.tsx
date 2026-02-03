@@ -170,14 +170,16 @@ export const IDR_BANKNOTES: BanknoteConfig[] = [
 
 export const TRANSLATIONS = {
   en: {
+    tagline: "Rupiah counter & converter",
+    heroDescription: "Count Rupiah and convert currencies",
     tabIdr: "IDR Cash",
     tabForeign: "Foreign Currency",
-    youHave: "You Have",
+    youHave: "You have",
     approx: "Approximately",
     visualBreakdown: "Visual Breakdown",
     exactMix: "Exact Mix",
     bigNotes: "Big Notes",
-    totalCash: "Total Rupiah Cash",
+    totalCash: "Total Rupiah cash",
     typeManual: "Type total manually or use the buttons below",
     banknoteBreakdown: "Banknote Breakdown",
     worthApprox: "Worth Approximately",
@@ -198,14 +200,16 @@ export const TRANSLATIONS = {
     edition: "Edition"
   },
   id: {
+    tagline: "Penghitung & konverter Rupiah",
+    heroDescription: "Hitung Rupiah dan konversi mata uang",
     tabIdr: "Tunai Rupiah",
     tabForeign: "Mata Uang Asing",
-    youHave: "Anda Memiliki",
+    youHave: "Anda memiliki",
     approx: "Sekitar",
     visualBreakdown: "Visualisasi Pecahan",
     exactMix: "Campuran Pas",
     bigNotes: "Pecahan Besar",
-    totalCash: "Total Tunai Rupiah",
+    totalCash: "Total tunai Rupiah",
     typeManual: "Ketik manual atau gunakan tombol cepat di bawah",
     banknoteBreakdown: "Rincian Pecahan",
     worthApprox: "Senilai Kira-kira",

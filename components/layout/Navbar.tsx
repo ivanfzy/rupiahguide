@@ -19,7 +19,10 @@ const Navbar: React.FC<NavbarProps> = ({ language, setLanguage, hideLanguageSwit
            <div className="bg-orange-500 p-1 rounded-lg text-white">
               <Icons.MoneyWavy className="w-6 h-6" weight="duotone" />
            </div>
-           <span className="text-white font-bold text-lg tracking-tight">RupiahGuide</span>
+           <div className="flex flex-col">
+             <span className="text-white font-bold text-lg tracking-tight leading-none">RupiahGuide</span>
+             <span className="text-stone-400 text-xs hidden sm:block">{t.tagline}</span>
+           </div>
         </Link>
 
         {/* Menu & Language */}

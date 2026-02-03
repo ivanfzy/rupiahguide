@@ -6,7 +6,7 @@ import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import matter from 'gray-matter';
 import SEOHead from '../components/seo/SEOHead';
-import { SCHEMA_ORG } from '@/config/seo';
+import { createArticleSchema, createBreadcrumbSchema } from '@/config/seo';
 
 interface BlogMeta {
   title: string;
@@ -69,9 +69,22 @@ const BlogPost = () => {
   return (
     <div className="min-h-screen bg-stone-100 text-stone-800 font-sans flex flex-col">
       <SEOHead 
-        title={meta.title} 
+        title={meta.title}
         description={meta.excerpt}
-        ogType="article"
+        canonicalPath={`/blog/${slug}`}
+        schema={{
+          ...createArticleSchema({
+            title: meta.title,
+            description: meta.excerpt,
+            url: `https://rupiahguide.com/blog/${slug}`,
+            datePublished: meta.date,
+          }),
+          ...createBreadcrumbSchema([
+            { name: "Home", url: "https://rupiahguide.com/" },
+            { name: "Blog", url: "https://rupiahguide.com/blog" },
+            { name: meta.title, url: `https://rupiahguide.com/blog/${slug}` },
+          ])
+        }}
       />
       <Navbar language="en" setLanguage={() => {}} hideLanguageSwitch={true} />
 
