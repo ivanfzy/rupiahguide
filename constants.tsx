@@ -226,7 +226,7 @@ export const TRANSLATIONS = {
     atmPresets: "ATM / Nominal Cepat",
     totalValue: "Total Nilai",
     close: "Tutup",
-    flip: "Ketuk untuk Balik",
+    flip: "Tap untuk Balik",
     edition: "Edisi"
   }
 };
