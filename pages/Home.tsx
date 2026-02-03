@@ -175,7 +175,7 @@ function Home() {
   return (
     <div className="min-h-screen bg-stone-100 text-stone-800 font-sans flex flex-col">
       <SEOHead 
-        title="RupiahGuide - Indonesia Travel Money Guide" 
+        title="Indonesia Travel Money Guide" 
         schema={SCHEMA_ORG.website}
       />
       

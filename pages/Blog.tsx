@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
+import SEOHead from '../components/seo/SEOHead';
 import matter from 'gray-matter';
 import { 
   BookOpen, 
@@ -118,6 +119,10 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-stone-100 text-stone-800 font-sans flex flex-col">
+      <SEOHead 
+        title="Blog - Essential Guides for Indonesia Travel Money" 
+        description="Essential guides to help you navigate money matters in Indonesia. Learn about Rupiah basics, budgeting, ATM, and more."
+      />
       <Navbar language="en" setLanguage={() => {}} hideLanguageSwitch={true} />
 
       <div className="bg-gradient-to-br from-stone-200 via-stone-300/50 to-stone-200 text-stone-800 pb-16 pt-10 px-6 shadow-lg relative overflow-hidden shrink-0 mb-8 border-b border-stone-300/50">
