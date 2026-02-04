@@ -313,7 +313,24 @@ function Home() {
                  </div>
 
                  <div className="bg-white rounded-3xl p-8 min-h-[300px] border border-amber-100 shadow-xl shadow-amber-100/50">
-                    {amount === 0 ? (
+                    {loading || conversionData.rate === 0 ? (
+                      /* Skeleton Loading State */
+                      <div className="h-full flex flex-col items-center justify-center py-12">
+                        <div className="flex items-center gap-3 mb-8">
+                          <div className="w-6 h-6 rounded-full bg-amber-200 animate-pulse"></div>
+                          <div className="h-4 w-32 bg-amber-200 rounded animate-pulse"></div>
+                        </div>
+                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 w-full max-w-lg">
+                          {[1, 2, 3].map((i) => (
+                            <div key={i} className="flex flex-col items-center gap-3">
+                              <div className="w-32 h-16 bg-stone-200 rounded-lg animate-pulse"></div>
+                              <div className="h-3 w-20 bg-stone-200 rounded animate-pulse"></div>
+                            </div>
+                          ))}
+                        </div>
+                        <div className="mt-8 h-3 w-48 bg-amber-100 rounded animate-pulse"></div>
+                      </div>
+                    ) : amount === 0 ? (
                       <div className="h-full flex flex-col items-center justify-center text-stone-400 py-16 px-4 text-center">
                          <div className="w-24 h-24 mb-6 bg-amber-100 rounded-full flex items-center justify-center">
                            <Icons.Wallet className="w-12 h-12 text-amber-300" />

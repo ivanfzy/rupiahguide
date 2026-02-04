@@ -18,11 +18,14 @@ const BanknoteVisual: React.FC<BanknoteVisualProps> = ({ config, className = "",
   // --- RENDER JPG IMAGE (Primary) ---
   if (!imageError) {
     return (
-      <div className={`relative overflow-hidden select-none bg-white ${className}`}>
+      <div className={`relative overflow-hidden select-none bg-stone-50 ${className}`}>
+        {/* Background Pattern */}
+        <div className="absolute inset-0 banknote-pattern opacity-40"></div>
+        
         <img 
           src={imagePath}
           alt={config.label}
-          className="w-full h-full object-contain"
+          className="w-full h-full object-contain relative z-10"
           style={{ 
             imageRendering: 'auto',
           }}

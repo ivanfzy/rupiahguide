@@ -103,7 +103,7 @@ const BanknoteModal: React.FC<BanknoteModalProps> = ({ isOpen, onClose, config, 
 
         {/* Visual Header with 3D Flip */}
         <div className={`h-64 ${config.color} relative flex flex-col items-center justify-center overflow-hidden shrink-0`}>
-           <div className="absolute inset-0 banknote-pattern opacity-30"></div>
+           <div className="absolute inset-0 banknote-pattern opacity-50"></div>
            
            {/* Flip Container */}
            <div 
