@@ -72,18 +72,22 @@ const BlogPost = () => {
         title={meta.title}
         description={meta.excerpt}
         canonicalPath={`/blog/${slug}`}
+        imageUrl={`https://rupiahguide.com/blog-images/${slug}.jpg`}
         schema={{
-          ...createArticleSchema({
-            title: meta.title,
-            description: meta.excerpt,
-            url: `https://rupiahguide.com/blog/${slug}`,
-            datePublished: meta.date,
-          }),
-          ...createBreadcrumbSchema([
-            { name: "Home", url: "https://rupiahguide.com/" },
-            { name: "Blog", url: "https://rupiahguide.com/blog" },
-            { name: meta.title, url: `https://rupiahguide.com/blog/${slug}` },
-          ])
+          "@context": "https://schema.org",
+          "@graph": [
+            createArticleSchema({
+              title: meta.title,
+              description: meta.excerpt,
+              url: `https://rupiahguide.com/blog/${slug}`,
+              datePublished: meta.date,
+            }),
+            createBreadcrumbSchema([
+              { name: "Home", url: "https://rupiahguide.com/" },
+              { name: "Blog", url: "https://rupiahguide.com/blog" },
+              { name: meta.title, url: `https://rupiahguide.com/blog/${slug}` },
+            ])
+          ]
         }}
       />
       <Navbar language="en" setLanguage={() => {}} hideLanguageSwitch={true} />
@@ -109,7 +113,14 @@ const BlogPost = () => {
               li: ({...props}) => <li className="pl-1" {...props} />,
               a: ({...props}) => <a className="text-orange-500 hover:text-orange-600 font-medium underline decoration-orange-500/30 hover:decoration-orange-500 transition-all" {...props} />,
               blockquote: ({...props}) => <blockquote className="border-l-4 border-orange-500 pl-4 italic text-stone-700 bg-amber-100/30 py-2 pr-4 rounded-r-lg mb-6" {...props} />,
-              code: ({...props}) => <code className="bg-amber-100/50 text-orange-700 px-1.5 py-0.5 rounded text-sm font-mono font-medium" {...props} />,
+              code: ({...props}) => <code className="text-inherit font-mono" {...props} />,
+              pre: ({children, ...props}) => (
+                <div className="my-6 rounded-xl border border-stone-200 overflow-x-auto">
+                  <pre className="bg-stone-50 p-4 text-sm text-stone-700 min-w-fit" {...props}>
+                    {children}
+                  </pre>
+                </div>
+              ),
               table: ({...props}) => <div className="overflow-x-auto my-8 rounded-lg border border-stone-200/50 shadow-sm"><table className="min-w-full divide-y divide-stone-200/50 !m-0" {...props} /></div>,
               thead: ({...props}) => <thead className="bg-amber-100/30" {...props} />,
               tbody: ({...props}) => <tbody className="bg-white divide-y divide-stone-200/50" {...props} />,

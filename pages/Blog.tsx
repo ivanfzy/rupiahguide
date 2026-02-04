@@ -134,7 +134,7 @@ const Blog = () => {
       />
       <Navbar language="en" setLanguage={() => {}} hideLanguageSwitch={true} />
 
-      <div className="bg-gradient-to-br from-stone-200 via-stone-300/50 to-stone-200 text-stone-800 pb-16 pt-10 px-6 shadow-lg relative overflow-hidden shrink-0 mb-8 border-b border-stone-300/50">
+      <div className="bg-gradient-to-br from-stone-200 via-stone-300/50 to-stone-200 text-stone-800 pb-16 pt-10 px-6 shadow-sm relative overflow-hidden shrink-0 mb-8 border-b border-stone-300/50">
         <div className="absolute top-0 right-0 w-96 h-96 bg-orange-400/10 rounded-full mix-blend-multiply filter blur-3xl opacity-40 -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-stone-400/10 rounded-full mix-blend-multiply filter blur-3xl opacity-40 translate-y-1/2 -translate-x-1/3 pointer-events-none"></div>
         <div className="max-w-4xl mx-auto text-center relative z-10">

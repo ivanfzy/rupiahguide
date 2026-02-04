@@ -76,7 +76,7 @@ export const IDR_BANKNOTES: BanknoteConfig[] = [
     color: 'bg-red-500', 
     textColor: 'text-red-900',
     accentColor: 'bg-red-600',
-    description: 'Featuring Dr. (H.C.) Ir. Soekarno and Dr. (H.C.) Drs. Mohammad Hatta. The largest denomination.',
+    description: 'Featuring the first President and Vice President of Indonesia, Dr. (H.C.) Ir. Soekarno and Dr. (H.C.) Drs. Mohammad Hatta. This is the most widely used denomination for daily transactions. Most ATMs dispense this note, and it is commonly used for hotel payments, restaurant bills, and shopping. Worth approximately $6 USD.',
     variants: [
       getVariant(100000, 2022),
       getVariant(100000, 2016)
@@ -90,7 +90,7 @@ export const IDR_BANKNOTES: BanknoteConfig[] = [
     color: 'bg-blue-500', 
     textColor: 'text-blue-900',
     accentColor: 'bg-blue-600',
-    description: 'Featuring Ir. H. Djuanda Kartawidjaja. Commonly used for daily shopping.',
+    description: 'Featuring Ir. H. Djuanda Kartawidjaja, a prominent statesman and economist. This blue note is perfect for grocery shopping, mid-range restaurant meals, and Gojek/Grab rides. Many warungs and local shops prefer receiving this denomination as it is easier to provide change.',
     variants: [
       getVariant(50000, 2022),
       getVariant(50000, 2016)
@@ -104,7 +104,7 @@ export const IDR_BANKNOTES: BanknoteConfig[] = [
     color: 'bg-green-500', 
     textColor: 'text-green-900',
     accentColor: 'bg-green-600',
-    description: 'Featuring Dr. G.S.S.J. Ratulangi. Used for small meals and transport.',
+    description: 'Featuring Dr. G.S.S.J. Ratulangi, a national hero from North Sulawesi. Ideal for local food at warungs, short-distance motorbike taxi rides (ojek), or a simple nasi goreng meal. A handy note to have in your wallet for everyday small purchases.',
     variants: [
       getVariant(20000, 2022),
       getVariant(20000, 2016)
@@ -118,7 +118,7 @@ export const IDR_BANKNOTES: BanknoteConfig[] = [
     color: 'bg-purple-500', 
     textColor: 'text-purple-900',
     accentColor: 'bg-purple-600',
-    description: 'Featuring Frans Kaisiepo. Useful for convenience store snacks.',
+    description: 'Featuring Frans Kaisiepo, a Papua independence activist who advocated for unity with Indonesia. Great for buying snacks at convenience stores (Indomaret/Alfamart), bottled water, or a cup of coffee at local kiosks. Often used together with smaller notes to make exact payment.',
     variants: [
       getVariant(10000, 2022),
       getVariant(10000, 2016)
@@ -132,7 +132,7 @@ export const IDR_BANKNOTES: BanknoteConfig[] = [
     color: 'bg-yellow-600', 
     textColor: 'text-yellow-900',
     accentColor: 'bg-yellow-700',
-    description: 'Featuring Dr. K.H. Idham Chalid. Commonly used for tips.',
+    description: 'Featuring Dr. K.H. Idham Chalid, a respected Islamic leader and politician. This note is commonly used for tipping hotel housekeeping, bellboys, or parking attendants. Also suitable for small street food like martabak or satay skewers.',
     variants: [
       getVariant(5000, 2022),
       getVariant(5000, 2016)
@@ -146,7 +146,7 @@ export const IDR_BANKNOTES: BanknoteConfig[] = [
     color: 'bg-gray-400', 
     textColor: 'text-gray-900',
     accentColor: 'bg-gray-500',
-    description: 'Featuring Mohammad Hoesni Thamrin. Typical parking fee note.',
+    description: 'Featuring Mohammad Hoesni Thamrin, a national hero from Jakarta. This denomination is perfect for paying parking fees at malls or tourist spots, typically ranging from Rp2.000 to Rp5.000 per entry. Also useful for public restrooms or small donations at temples.',
     variants: [
       getVariant(2000, 2022),
       getVariant(2000, 2016)
@@ -160,7 +160,7 @@ export const IDR_BANKNOTES: BanknoteConfig[] = [
     color: 'bg-yellow-200', 
     textColor: 'text-yellow-800',
     accentColor: 'bg-yellow-300',
-    description: 'Featuring Tjut Meutia. Often coin, but paper exists.',
+    description: 'Featuring Tjut Meutia, a female national hero from Aceh who fought against Dutch colonization. More commonly found as a paper, but the coin version still circulates. Useful for making exact change or buying candies and small items at traditional markets.',
     variants: [
       getVariant(1000, 2022),
       getVariant(1000, 2016)

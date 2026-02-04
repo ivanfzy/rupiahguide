@@ -8,6 +8,8 @@ interface SEOHeadProps {
   canonicalPath?: string; // e.g., "/blog/post-slug" - will be combined with base URL
   noIndex?: boolean; // Set to true for pages that shouldn't be indexed
   schema?: object; // For JSON-LD
+  imageUrl?: string; // Open Graph image URL
+  type?: 'website' | 'article'; // Open Graph type
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({ 
@@ -15,7 +17,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   description, 
   canonicalPath, 
   noIndex = false,
-  schema
+  schema,
+  imageUrl,
+  type = 'website'
 }) => {
   const siteTitle = title 
     ? SEO_CONFIG.titleTemplate.replace('%s', title) 
@@ -47,7 +51,20 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="theme-color" content={SEO_CONFIG.themeColor} />
       <meta name="msapplication-TileColor" content={SEO_CONFIG.themeColor} />
       
-      {/* Note: OpenGraph and Twitter Cards disabled per project requirements */}
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:title" content={siteTitle} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:site_name" content="RupiahGuide" />
+      {imageUrl && <meta property="og:image" content={imageUrl} />}
+      
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content={canonicalUrl} />
+      <meta name="twitter:title" content={siteTitle} />
+      <meta name="twitter:description" content={metaDescription} />
+      {imageUrl && <meta name="twitter:image" content={imageUrl} />}
 
       {/* JSON-LD Schema Markup */}
       {schema && (
@@ -55,19 +72,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           {JSON.stringify(schema)}
         </script>
       )}
-      
-      {/* Analytics (Disabled by default) */}
-      {/* Google Analytics (GA4)
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-      <script>
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-XXXXXXXXXX');
-        `}
-      </script>
-      */}
     </Helmet>
   );
 };

@@ -11,7 +11,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
       <div
         ref={ref}
         className={cn(
-          "bg-gradient-to-br from-stone-200 via-stone-300/50 to-stone-200 text-stone-800 px-6 shadow-lg relative overflow-hidden shrink-0 transition-all duration-300 border-b border-stone-300/50",
+          "bg-gradient-to-br from-stone-200 via-stone-300/50 to-stone-200 text-stone-800 px-6 shadow-sm relative overflow-hidden shrink-0 transition-all duration-300 border-b border-stone-300/50",
           className
         )}
         {...props}

@@ -22,7 +22,7 @@ export const SITE_NAME_CONFIG = {
   ],
   
   // Title templates for different page types
-  // Pattern: [Page Title] | [Site Name]
+  // Pattern: [Page Title] - [Site Name]
   titleTemplates: {
     home: "Indonesia Travel Money Guide - RupiahGuide",
     blog: "Indonesia Money Tips & Guides - RupiahGuide",
@@ -92,11 +92,18 @@ export const createOrganizationSchema = () => ({
 
 export const createWebsiteSchema = () => ({
   "@context": "https://schema.org",
-  "@type": "WebSite",
+  "@type": "WebApplication",
   "name": "RupiahGuide",
   "alternateName": ["RupiahGuide", "Indonesia Travel Money Guide", "Visual guide to Indonesian Rupiah banknotes"],
   "url": SEO_CONFIG.url,
   "description": SITE_DESCRIPTIONS.standard,
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
   "potentialAction": {
     "@type": "SearchAction",
     "target": `${SEO_CONFIG.url}/blog?q={search_term_string}`,
