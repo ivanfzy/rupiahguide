@@ -1,6 +1,6 @@
 ---
-title: "Hidden Costs Tourists Miss: A Local's Perspective"
-excerpt: "Discover the small expenses that quietly drain your budget and how locals avoid wasting money on them."
+title: "Hidden Costs in Indonesia Travel"
+excerpt: "Unlisted expenses in Indonesian tourism including location-based pricing, convenience premiums, and service fees. Price variation factors by venue type."
 date: "2026-02-01"
 category: "budget-planning"
 order: 4

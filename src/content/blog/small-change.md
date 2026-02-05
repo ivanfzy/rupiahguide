@@ -1,6 +1,6 @@
 ---
-title: "Small Change Survival Guide: Why You Need Rp1.000–5.000 Notes"
-excerpt: "Master the art of carrying and using small denomination rupiah notes."
+title: "Small Denomination Usage in Indonesia"
+excerpt: "Applications for low-value rupiah notes in daily transactions. Exact payment scenarios and small-scale financial exchanges."
 date: "2026-02-01"
 category: "daily-transactions"
 order: 2

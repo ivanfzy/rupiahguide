@@ -81,7 +81,7 @@ const Banknote: React.FC<BanknoteProps> = ({ config, count, onClick }) => {
         {/* Count Badge if multiple */}
         {count > 1 && (
           <div 
-            className="absolute -top-4 -right-4 bg-stone-800 text-amber-50 font-bold text-sm w-8 h-8 flex items-center justify-center rounded-full shadow-lg z-50 border-2 border-white"
+            className="absolute -top-4 -right-4 bg-stone-800 text-amber-50 font-bold text-sm w-8 h-8 flex items-center justify-center rounded-full shadow-lg z-20 border-2 border-white"
             style={{ transform: `translate(${displayCount * 6}px, ${displayCount * -6}px)`}}
           >
             {count}x

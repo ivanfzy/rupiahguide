@@ -1,6 +1,6 @@
 ---
-title: "Digital Payments in Indonesia: e-Wallets, QRIS, and Modern Apps"
-excerpt: "Learn how to use Indonesia's mobile payment apps effectively and when they actually simplify your travel."
+title: "Digital Payments and E-Wallets in Indonesia"
+excerpt: "Electronic wallet systems and QR code payments available in Indonesia. Coverage areas and technical requirements for mobile transactions."
 date: "2026-02-01"
 category: "digital-emergency"
 order: 1

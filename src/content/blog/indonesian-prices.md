@@ -1,6 +1,6 @@
 ---
-title: "Why Indonesian Prices Look So Big - Dealing with Zeros"
-excerpt: "In Indonesia, prices are often written with lots of zeros. Why? And how does this affect your budgeting?"
+title: "Rupiah Currency Denominations Explained"
+excerpt: "Indonesian rupiah denomination structure and value relationships. Currency conversion approaches and psychological factors in large-number pricing."
 date: "2026-02-01"
 category: "foundation"
 order: 2

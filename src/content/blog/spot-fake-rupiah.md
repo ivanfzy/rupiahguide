@@ -1,6 +1,6 @@
 ---
-title: "How to Spot Fake Indonesian Rupiah Notes"
-excerpt: "Identifying fake Indonesian rupiah notes is easy. Here are some common signs to look out for."
+title: "Identifying Counterfeit Rupiah"
+excerpt: "Security elements in genuine Indonesian banknotes for authenticity verification. Physical characteristics and detection methods for counterfeit currency."
 date: "2026-02-01"
 category: "foundation"
 order: 3

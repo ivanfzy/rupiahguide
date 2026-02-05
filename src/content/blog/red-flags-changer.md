@@ -1,6 +1,6 @@
 ---
-title: "Red Flags at Money Changers: When to Walk Away"
-excerpt: "Clear warning signs to identify and exit unsafe money changers before money changes hands."
+title: "Money Changer Safety Indicators in Indonesia"
+excerpt: "Indicators of authorized currency exchange operations in Indonesia. Documentation requirements and procedural standards at legitimate money changers."
 date: "2026-02-01"
 category: "exchange-safety"
 order: 2

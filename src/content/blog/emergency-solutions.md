@@ -1,5 +1,5 @@
 ---
-title: "Emergency Payment Solutions: What to Do When You're Short on Cash or Cards Fail"
+title: "Emergency Cash Options in Indonesia"
 excerpt: "Real strategies for handling payment emergencies including money transfers, alternative card options, and borrowing solutions."
 date: "2026-02-01"
 category: "digital-emergency"

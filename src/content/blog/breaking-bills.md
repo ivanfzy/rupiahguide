@@ -1,6 +1,6 @@
 ---
-title: "Breaking Down Large Bills: Where Indonesians Get Change"
-excerpt: "Learn which establishments readily provide change and insider tips from locals."
+title: "Breaking Large Rupiah Bills in Indonesia"
+excerpt: "Methods for obtaining smaller rupiah denominations from large bills. Retail establishments and service providers that facilitate denomination exchange."
 date: "2026-02-01"
 category: "exchange-safety"
 order: 3

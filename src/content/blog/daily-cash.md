@@ -1,6 +1,6 @@
 ---
-title: "How Much Cash Should You Carry Daily? A Budget Breakdown"
-excerpt: "Learn the ideal daily cash amounts for different travel styles, from backpackers to luxury travelers."
+title: "Daily Cash Amounts for Travel in Indonesia"
+excerpt: "Recommended cash quantities for daily activities by travel style. Denomination requirements and withdrawal timing considerations."
 date: "2026-02-01"
 category: "budget-planning"
 order: 2

@@ -1,6 +1,6 @@
 ---
-title: "Understanding Indonesian Rupiah Currency"
-excerpt: "A detailed guide to understanding Indonesian rupiah currency, its denominations, and how to use them."
+title: "Indonesian Rupiah Currency Guide"
+excerpt: "Specifications of circulating Indonesian rupiah banknotes and coins. Denomination identification features and appropriate usage contexts."
 date: "2026-02-01"
 category: "foundation"
 order: 1

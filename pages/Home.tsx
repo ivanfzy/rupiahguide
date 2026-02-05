@@ -238,7 +238,7 @@ function Home() {
               {/* Currency Selector */}
               <div className="flex justify-center mb-6 px-4">
                  <CardOverlap className="-mt-14 w-full max-w-lg">
-                   <div className="flex items-center justify-center gap-4 bg-white p-2.5 rounded-full border border-amber-200/50 shadow-lg w-full">
+                   <div className="flex items-center justify-center gap-4 bg-white p-2.5 rounded-full border border-amber-200/50 shadow-md w-full">
                     <div className="flex items-center gap-3 px-4 border-r border-amber-100 flex-1">
                       <span className={`${selectedCurrency.flag} text-3xl rounded-sm shadow-sm`}></span>
                       <select 

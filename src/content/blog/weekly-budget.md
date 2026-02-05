@@ -1,6 +1,6 @@
 ---
-title: "How to Plan Your Cash Needs for a Week in Indonesia"
-excerpt: "Calculate the exact amount of cash to withdraw for your week-long trip based on your activities and daily spending."
+title: "Weekly Cash Planning for Indonesia Travel"
+excerpt: "Cash requirement calculations for multi-day travel in Indonesia. Withdrawal scheduling and expense distribution across varying cost days."
 date: "2026-02-01"
 category: "budget-planning"
 order: 3

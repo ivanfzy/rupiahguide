@@ -1,6 +1,6 @@
 ---
-title: "Daily Budget Breakdown: $50 vs $100 vs $200 in Indonesia"
-excerpt: "Understand what different daily budgets actually buy you and which travel style matches your spending."
+title: "Daily Travel Budget in Indonesia"
+excerpt: "Cost components for travel in Indonesia including accommodation, dining, transport, and activities. Budget categories from basic to luxury spending levels."
 date: "2026-02-01"
 category: "budget-planning"
 order: 1

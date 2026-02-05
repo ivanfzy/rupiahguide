@@ -1,6 +1,6 @@
 ---
-title: "Tipping Culture in Indonesia: How Much and When to Tip"
-excerpt: "Learn when tipping is expected, appropriate amounts by situation, and cultural tips for respectful giving."
+title: "Tipping Practices in Indonesia"
+excerpt: "Gratuity conventions across Indonesian hospitality and service sectors. Cultural norms for service recognition and appropriate acknowledgment methods."
 date: "2026-02-01"
 category: "daily-transactions"
 order: 3
