@@ -4,7 +4,7 @@
   "description": "Count Indonesian Rupiah banknotes, convert currencies, and get essential travel money tips for your Indonesia trip.",
   "start_url": "/",
   "display": "standalone",
-  "background_color":="#fafaf9",
+  "background_color":"#fafaf9",
   "theme_color": "#f97316",
   "orientation": "portrait",
   "scope": "/",
