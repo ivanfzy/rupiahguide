@@ -77,31 +77,32 @@ const initAI = () => {
   }
 };
 
-// Hardcoded fallback as a last resort
+// Hardcoded fallback as a last resort (last updated: May 2026)
+// These are approximate mid-rates and should be refreshed periodically
 export const FALLBACK_RATES: Record<string, number> = {
-  'USD': 15800,
-  'EUR': 17100,
-  'AUD': 10500,
-  'SGD': 11800,
-  'JPY': 105,
-  'GBP': 20100,
-  'MYR': 3400,
-  'CNY': 2200,
+  'USD': 17300,
+  'EUR': 20300,
+  'AUD': 12400,
+  'SGD': 13600,
+  'JPY': 108,
+  'GBP': 23400,
+  'MYR': 4400,
+  'CNY': 2500,
   'KRW': 12,
-  'THB': 450,
-  'SAR': 4200,
-  'HKD': 2000,
-  'TWD': 500,
-  'INR': 190,
-  'PHP': 280,
-  'VND': 0.65,
-  'NZD': 9600,
-  'CAD': 11600,
-  'CHF': 18000,
-  'AED': 4300,
-  'BRL': 3100,
-  'TRY': 500,
-  'RUB': 170
+  'THB': 530,
+  'SAR': 4600,
+  'HKD': 2200,
+  'TWD': 550,
+  'INR': 183,
+  'PHP': 282,
+  'VND': 0.66,
+  'NZD': 10100,
+  'CAD': 12700,
+  'CHF': 22000,
+  'AED': 4700,
+  'BRL': 3500,
+  'TRY': 385,
+  'RUB': 233
 };
 
 // Modified to use Cloudflare Function Proxy in production
@@ -207,7 +208,7 @@ export const fetchLiveRate = async (currencyCode: string, forceRefresh = false):
   // 1. Try Gemini API
   if (genAI) {
     try {
-      const model = 'gemini-3-flash-preview'; // Updated to latest model per user request
+      const model = 'gemini-3-flash-preview'; // Latest model with Google Search grounding support
       const prompt = `What is the current exchange rate for 1 ${currencyCode} to IDR (Indonesian Rupiah)? Provide the exact numeric exchange rate.`;
 
       const response = await genAI.models.generateContent({
@@ -295,7 +296,7 @@ export const fetchPopularRates = async (): Promise<RateMap> => {
   const genAI = initAI();
   if (genAI) {
     try {
-      const model = 'gemini-2.0-flash';
+      const model = 'gemini-2.5-flash'; // Stable model for batch rate fetching (no grounding needed)
       const prompt = `Return the current exchange rate for 1 unit of the following currencies to IDR: USD, EUR, AUD, SGD, MYR, GBP.`;
 
       const response = await genAI.models.generateContent({
@@ -332,8 +333,7 @@ export const fetchPopularRates = async (): Promise<RateMap> => {
     }
   }
 
-  // 2. Try Open API Fallback
-  // (Previously called, but let's just use FALLBACK if we reached here)
+  // 2. Gemini API fallback (Open API already tried above)
   
   // 3. Last Resort: Hardcoded
   return FALLBACK_RATES;

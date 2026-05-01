@@ -1,6 +1,6 @@
 ---
-title: "What to Do with Leftover Indonesian Rupiah: Practical Options"
-excerpt: "Strategies for managing unused Indonesian rupiah before departure. Conversion options, spending opportunities, and retention considerations."
+title: "What to Do with Leftover Rupiah Before Leaving Indonesia"
+excerpt: "Options for unused rupiah before you fly home — exchange it back, spend it at the airport, donate it, or keep it for a return trip."
 date: "2026-02-22"
 category: "budget-planning"
 order: 9

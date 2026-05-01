@@ -1,6 +1,6 @@
 ---
-title: "Common Currency Exchange Scams in Indonesia"
-excerpt: "Recognizing fraudulent practices at currency exchanges and verification protocols at licensed money changers. Transaction safety measures for foreign currency conversion."
+title: "Currency Exchange Scams in Indonesia and How to Avoid Them"
+excerpt: "Common money exchange scams in Indonesia — counting tricks, rate switching, and shortchanging. How to spot them and protect yourself."
 date: "2026-02-01"
 category: "exchange-safety"
 order: 1

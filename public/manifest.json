@@ -1,7 +1,7 @@
 {
   "name": "RupiahGuide - Indonesia Travel Money Guide",
   "short_name": "RupiahGuide",
-  "description": "Count Indonesian Rupiah banknotes, convert currencies, and get essential travel money tips for your Indonesia trip.",
+  "description": "Count Indonesian Rupiah banknotes and convert foreign currency to IDR. A practical tool for travelers in Indonesia.",
   "start_url": "/",
   "display": "standalone",
   "background_color":"#fafaf9",

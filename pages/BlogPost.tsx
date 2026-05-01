@@ -6,14 +6,42 @@ import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import matter from 'gray-matter';
 import SEOHead from '../components/seo/SEOHead';
-import { createArticleSchema, createBreadcrumbSchema } from '@/config/seo';
+import { createArticleSchema, createBreadcrumbSchema, createFAQSchema } from '@/config/seo';
 
 interface BlogMeta {
   title: string;
   excerpt: string;
   date: string;
   readTime: string;
+  faq?: Array<{ question: string; answer: string }>;
 }
+
+// Generate a URL-friendly id from heading text
+const slugify = (text: string): string =>
+  text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+
+// Heading components with id attributes for anchor linking
+// Markdown h1 is demoted to h2 since the page title is already the h1
+const MarkdownH1 = ({ children, ...props }: React.HTMLAttributes<HTMLHeadingElement> & { children?: React.ReactNode }) => {
+  const text = String(children ?? '');
+  const id = slugify(text);
+  return <h2 id={id} className="text-3xl md:text-4xl font-bold text-stone-800 mt-4 mb-4 leading-tight scroll-mt-24" {...props}>{children}</h2>;
+};
+
+const MarkdownH2 = ({ children, ...props }: React.HTMLAttributes<HTMLHeadingElement> & { children?: React.ReactNode }) => {
+  const text = String(children ?? '');
+  const id = slugify(text);
+  return <h2 id={id} className="text-2xl md:text-3xl font-bold text-stone-800 mt-8 mb-4 leading-tight border-b border-stone-200/50 pb-2 scroll-mt-24" {...props}>{children}</h2>;
+};
+
+const MarkdownH3 = ({ children, ...props }: React.HTMLAttributes<HTMLHeadingElement> & { children?: React.ReactNode }) => {
+  const text = String(children ?? '');
+  const id = slugify(text);
+  return <h3 id={id} className="text-xl md:text-2xl font-bold text-stone-800 mt-6 mb-3 leading-tight scroll-mt-24" {...props}>{children}</h3>;
+};
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -27,7 +55,6 @@ const BlogPost = () => {
       
       try {
         // Dynamic import based on slug
-        // Note: Vite requires glob to be static string literal, so we import all and pick one
         const modules = import.meta.glob('../src/content/blog/*.md', { query: '?raw', import: 'default' });
         const path = `../src/content/blog/${slug}.md`;
         
@@ -86,7 +113,8 @@ const BlogPost = () => {
               { name: "Home", url: "https://rupiahguide.com/" },
               { name: "Blog", url: "https://rupiahguide.com/blog" },
               { name: meta.title, url: `https://rupiahguide.com/blog/${slug}` },
-            ])
+            ]),
+            ...(meta.faq?.length ? [createFAQSchema(meta.faq)] : [])
           ]
         }}
       />
@@ -104,9 +132,9 @@ const BlogPost = () => {
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
             components={{
-              h1: ({...props}) => <h1 className="text-3xl md:text-4xl font-bold text-stone-800 mt-4 mb-4 leading-tight" {...props} />,
-              h2: ({...props}) => <h2 className="text-2xl md:text-3xl font-bold text-stone-800 mt-8 mb-4 leading-tight border-b border-stone-200/50 pb-2" {...props} />,
-              h3: ({...props}) => <h3 className="text-xl md:text-2xl font-bold text-stone-800 mt-6 mb-3 leading-tight" {...props} />,
+              h1: MarkdownH1,
+              h2: MarkdownH2,
+              h3: MarkdownH3,
               p: ({...props}) => <p className="text-stone-600 leading-relaxed mb-6 text-lg" {...props} />,
               ul: ({...props}) => <ul className="list-disc list-outside ml-6 mb-6 text-stone-600 space-y-2 text-lg" {...props} />,
               ol: ({...props}) => <ol className="list-decimal list-outside ml-6 mb-6 text-stone-600 space-y-2 text-lg" {...props} />,

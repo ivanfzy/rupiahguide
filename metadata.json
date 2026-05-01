@@ -1,5 +1,5 @@
 {
-  "name": "RupiahGuide - Tourist Currency Companion",
-  "description": "The ultimate currency companion for tourists in Indonesia. Visualize exchange rates or count your Rupiah cash easily. Visit RupiahGuide.com.",
+  "name": "RupiahGuide",
+  "description": "RupiahGuide helps travelers in Indonesia count Rupiah banknotes, convert foreign currencies to IDR, and plan daily spending. Built for visitors who want to handle Indonesian money with confidence.",
   "requestFramePermissions": []
 }

@@ -1,6 +1,6 @@
 ---
-title: "Indonesian Rupiah Currency Guide"
-excerpt: "Specifications of circulating Indonesian rupiah banknotes and coins. Denomination identification features and appropriate usage contexts."
+title: "Understanding Indonesian Rupiah: A Visual Guide to Banknotes"
+excerpt: "What each Indonesian banknote looks like, what it's worth, and when you'll use it — a visual reference for Rp1,000 through Rp100,000."
 date: "2026-02-01"
 category: "foundation"
 order: 1

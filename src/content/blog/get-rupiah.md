@@ -1,6 +1,6 @@
 ---
-title: "How to Get Indonesian Rupiah: Currency Options for Travelers"
-excerpt: "Available methods for obtaining Indonesian rupiah as a foreign traveler. Comparison of exchange services, ATMs, and digital options."
+title: "How to Get Indonesian Rupiah: ATMs, Exchange, and Other Options"
+excerpt: "Three ways to get rupiah — ATMs, money changers, and your home bank. Pros, cons, and fees for each method so you can pick what works for your trip."
 date: "2026-02-22"
 category: "exchange-safety"
 order: 4

@@ -1,6 +1,6 @@
 ---
-title: "From Street Food to Restaurants: Understanding Meal Prices in Indonesia"
-excerpt: "Comparative meal pricing across Indonesian dining establishments. Price structures and value expectations by restaurant category."
+title: "How Much Is a Meal in Indonesia? Food Prices in Rupiah"
+excerpt: "How much does a meal cost in Indonesia? From Rp25,000 street food to Rp500,000+ fine dining — actual prices at every tier, with USD equivalents."
 date: "2026-02-22"
 category: "budget-planning"
 order: 6

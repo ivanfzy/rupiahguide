@@ -1,6 +1,6 @@
 ---
-title: "Cash or Card? Payment Methods Accepted Across Indonesia"
-excerpt: "Understand when to use cash versus card based on location type, vendor size, and payment system reliability."
+title: "Cash or Card? Payment Methods in Indonesia Explained"
+excerpt: "When to use cash vs. card in Indonesia — warungs need cash, malls take cards, and e-wallets are optional. A practical guide to what works where."
 date: "2026-02-01"
 category: "daily-transactions"
 order: 1

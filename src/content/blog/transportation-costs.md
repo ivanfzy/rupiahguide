@@ -1,6 +1,6 @@
 ---
-title: "Getting Around Indonesia: Transportation Costs and Payment Methods"
-excerpt: "Transportation options and pricing for travel within Indonesia. Cost comparison across modes and payment requirements for each service type."
+title: "Transportation Costs in Indonesia: Getting Around by Taxi, Scooter, and More"
+excerpt: "What it costs to get around Indonesia — Grab rides, scooter rentals, private drivers, and intercity transport. Prices in rupiah with payment options for each."
 date: "2026-02-22"
 category: "budget-planning"
 order: 8

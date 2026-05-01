@@ -1,6 +1,6 @@
 ---
-title: "Digital Payments and E-Wallets in Indonesia"
-excerpt: "Electronic wallet systems and QR code payments available in Indonesia. Coverage areas and technical requirements for mobile transactions."
+title: "Online Payment Methods in Indonesia: What Tourists Need to Know"
+excerpt: "E-wallets, QRIS, and digital payments in Indonesia — which ones work for tourists, which to skip, and when cash is still the better option."
 date: "2026-02-01"
 category: "digital-emergency"
 order: 1

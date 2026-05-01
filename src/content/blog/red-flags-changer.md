@@ -1,6 +1,6 @@
 ---
-title: "Money Changer Safety Indicators in Indonesia"
-excerpt: "Indicators of authorized currency exchange operations in Indonesia. Documentation requirements and procedural standards at legitimate money changers."
+title: "How to Identify Authorized Money Changers in Indonesia"
+excerpt: "How to tell a legitimate money changer from a scam operation — authorized logos, rate boards, and documentation to look for before you exchange."
 date: "2026-02-01"
 category: "exchange-safety"
 order: 2

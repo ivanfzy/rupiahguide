@@ -1,6 +1,6 @@
 ---
-title: "Rupiah Currency Denominations Explained"
-excerpt: "Indonesian rupiah denomination structure and value relationships. Currency conversion approaches and psychological factors in large-number pricing."
+title: "Rupiah Denominations Explained: Why Numbers Are So Large"
+excerpt: "Why does Rp100,000 feel expensive when it's only $6? Understand Indonesian rupiah denominations, convert prices to USD mentally, and avoid the big-number confusion."
 date: "2026-02-01"
 category: "foundation"
 order: 2

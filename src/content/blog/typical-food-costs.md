@@ -1,6 +1,6 @@
 ---
-title: "Typical Food Costs for Travelers in Indonesia"
-excerpt: "Food expense planning for different travel styles in Indonesia. Daily meal budgeting and cost-saving strategies by traveler category."
+title: "Typical Food Costs in Indonesia by Travel Style"
+excerpt: "How much to budget for food per day — $5 for street food, $15 for casual dining, $30+ for restaurants. Daily meal costs by traveler type."
 date: "2026-02-22"
 category: "budget-planning"
 order: 7

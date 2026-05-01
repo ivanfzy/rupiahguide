@@ -1,6 +1,6 @@
 ---
-title: "Hidden Costs in Indonesia Travel"
-excerpt: "Unlisted expenses in Indonesian tourism including location-based pricing, convenience premiums, and service fees. Price variation factors by venue type."
+title: "Hidden Costs in Indonesia: What Tourists Don't Expect to Pay For"
+excerpt: "Unexpected expenses in Indonesia — tourist-area markup, parking fees, temple donations, and convenience premiums that add Rp50,000–150,000 to your daily spend."
 date: "2026-02-01"
 category: "budget-planning"
 order: 4

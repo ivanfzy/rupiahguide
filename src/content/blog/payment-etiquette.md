@@ -1,6 +1,6 @@
 ---
-title: "Respectful Payment Practices: How to Handle Money Like a Local"
-excerpt: "Cultural norms for monetary transactions in Indonesia. Appropriate behaviors when paying, receiving change, and handling currency in various social contexts."
+title: "Payment Etiquette in Indonesia: How to Handle Money Respectfully"
+excerpt: "How to pay, receive change, and handle money in Indonesia — right-hand customs, bargaining norms, and social expectations around transactions."
 date: "2026-02-22"
 category: "daily-transactions"
 order: 4

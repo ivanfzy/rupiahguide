@@ -1,9 +1,16 @@
 ---
-title: "Daily Travel Budget in Indonesia"
-excerpt: "Cost components for travel in Indonesia including accommodation, dining, transport, and activities. Budget categories from basic to luxury spending levels."
+title: "Daily Travel Budget in Indonesia: $50 to $200+ Per Day"
+excerpt: "Plan your Indonesia trip budget: $50/day for backpackers, $100/day for comfort, $200+/day for premium travel. Detailed daily cost breakdowns with real prices in rupiah."
 date: "2026-02-01"
 category: "budget-planning"
 order: 1
+faq:
+  - question: "What is the average daily cost per person in Indonesia?"
+    answer: "Budget travelers spend about $25-50/day (Rp400,000-830,000), mid-range travelers about $60-100/day (Rp1,000,000-1,660,000), and premium travelers $150-200+/day (Rp2,500,000+). Accommodation is usually pre-booked separately."
+  - question: "How much does food cost per day in Indonesia?"
+    answer: "Street food and warungs: $3-8/day (Rp50,000-130,000). Casual restaurants: $10-20/day (Rp170,000-330,000). Mid-range restaurants: $25-50/day (Rp400,000-830,000). Alcohol significantly increases meal costs."
+  - question: "Is $50 a day enough for Indonesia?"
+    answer: "Yes, $50/day is viable for budget travelers who eat at warungs, use local transport, and stay in hostels or budget guesthouses. Actual daily spending often lands around $25-40, with the remainder as buffer for occasional splurges."
 ---
 
 

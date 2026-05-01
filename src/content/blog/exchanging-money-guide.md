@@ -1,6 +1,6 @@
 ---
-title: "Exchanging Money in Indonesia: What to Know Before You Arrive"
-excerpt: "Preparation guidelines for currency exchange in Indonesia. Documentation needs, rate expectations, and procedural knowledge for foreign currency conversion."
+title: "Exchanging Money in Indonesia: Where to Get the Rate"
+excerpt: "Where to exchange money in Indonesia — authorized money changers vs. banks vs. hotels. Rate comparisons, what to bring, and how to avoid poor rates."
 date: "2026-02-22"
 category: "exchange-safety"
 order: 5

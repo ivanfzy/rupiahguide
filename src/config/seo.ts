@@ -17,8 +17,7 @@ export const SITE_NAME_CONFIG = {
   // Alternative names for context
   // Matches SITE_IDENTITY.tagline variations
   alternatives: [
-    "RupiahGuide - Indonesia Travel Money",
-    "RupiahGuide - Your Indonesia Travel Money Companion",
+    "RupiahGuide - Indonesia Travel Money Guide",
   ],
   
   // Title templates for different page types
@@ -37,14 +36,14 @@ export const SITE_NAME_CONFIG = {
 
 // Descriptions in various lengths for reuse across the site
 export const SITE_DESCRIPTIONS = {
-  // Short: for constrained spaces
-  short: "Count Rupiah banknotes.",
+  // Short: for constrained spaces (nav, short_name)
+  short: "Count Rupiah and convert currencies.",
   
   // Standard: optimal for meta description
-  standard: "Count Indonesian Rupiah banknotes and convert foreign currency to IDR. A simple tool for travelers in Indonesia.",
+  standard: "Count Indonesian Rupiah banknotes and convert foreign currency to IDR. A practical tool for travelers in Indonesia.",
   
-  // Long: for about pages, app stores
-  long: "RupiahGuide is a simple tool for counting Indonesian Rupiah banknotes and converting foreign currencies. Useful for travelers visiting Indonesia.",
+  // Long: for app stores, metadata.json
+  long: "RupiahGuide helps travelers in Indonesia count Rupiah banknotes, convert foreign currencies to IDR, and plan daily spending. Built for visitors who want to handle Indonesian money with confidence.",
 };
 
 // =============================================================================
@@ -94,7 +93,7 @@ export const createWebsiteSchema = () => ({
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "RupiahGuide",
-  "alternateName": ["RupiahGuide", "Indonesia Travel Money Guide", "Visual guide to Indonesian Rupiah banknotes"],
+  "alternateName": ["RupiahGuide", "Indonesia Travel Money Guide"],
   "url": SEO_CONFIG.url,
   "description": SITE_DESCRIPTIONS.standard,
   "applicationCategory": "FinanceApplication",
@@ -188,3 +187,17 @@ export const SCHEMA_ORG = {
   organization: createOrganizationSchema(),
   website: createWebsiteSchema(),
 };
+
+// FAQ Schema for rich results (e.g., blog posts with FAQ sections)
+export const createFAQSchema = (faqs: Array<{ question: string; answer: string }>) => ({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer,
+    },
+  })),
+});

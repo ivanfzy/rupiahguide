@@ -1,6 +1,6 @@
 ---
-title: "Breaking Large Rupiah Bills in Indonesia"
-excerpt: "Methods for obtaining smaller rupiah denominations from large bills. Retail establishments and service providers that facilitate denomination exchange."
+title: "Breaking Large Rupiah Bills: How to Get Small Change in Indonesia"
+excerpt: "ATMs give Rp100,000 notes but you need small bills for everyday purchases. Where to break large rupiah bills and how to build a small-change supply."
 date: "2026-02-01"
 category: "exchange-safety"
 order: 3

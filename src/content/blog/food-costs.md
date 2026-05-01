@@ -1,6 +1,6 @@
 ---
-title: "How Much Does Food Cost in Indonesia"
-excerpt: "Realistic food pricing across Indonesian dining options from street vendors to restaurants. Meal cost ranges by location type and budget level."
+title: "Food Costs in Indonesia: What to Expect at Each Price Level"
+excerpt: "What food costs in Indonesia — from Rp15,000 street meals to Rp200,000+ restaurant dinners. Price ranges by venue type with budget tips."
 date: "2026-02-22"
 category: "budget-planning"
 order: 5

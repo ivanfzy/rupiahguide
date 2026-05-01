@@ -1,6 +1,6 @@
 ---
-title: "Emergency Cash Options in Indonesia"
-excerpt: "Real strategies for handling payment emergencies including money transfers, alternative card options, and borrowing solutions."
+title: "Emergency Cash Options in Indonesia: When You Run Out of Money"
+excerpt: "What to do when you run out of cash in Indonesia — international transfers, card alternatives, borrowing from hotels, and other backup plans."
 date: "2026-02-01"
 category: "digital-emergency"
 order: 2

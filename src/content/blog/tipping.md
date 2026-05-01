@@ -1,9 +1,18 @@
 ---
-title: "Tipping Practices in Indonesia"
-excerpt: "Gratuity conventions across Indonesian hospitality and service sectors. Cultural norms for service recognition and appropriate acknowledgment methods."
+title: "Tipping in Indonesia: When, Where, and How Much"
+excerpt: "Tipping in Indonesia is appreciated but not mandatory. Find out how much to tip at restaurants, hotels, spas, and taxis — with specific amounts in rupiah for each situation."
 date: "2026-02-01"
 category: "daily-transactions"
 order: 3
+faq:
+  - question: "Do you tip in Indonesia?"
+    answer: "Tipping in Indonesia is appreciated but not mandatory. Unlike the US, there is no social obligation to tip. At warungs and street vendors, tipping is not expected. At mid-range and upscale restaurants, 5-15% is customary if no service charge is already added to the bill."
+  - question: "What is the average tip percentage at restaurants in Indonesia?"
+    answer: "If no service charge is included: 5-10% at mid-range restaurants (Rp30,000-50,000 on a typical meal) and 10-15% at upscale restaurants (Rp100,000+). If a service charge of 5-10% is already on the bill, no additional tip is required unless service was exceptional."
+  - question: "Is tipping customary in tourist areas?"
+    answer: "Yes, tipping is more expected in tourist-heavy areas where staff are accustomed to international visitors. Restaurants, spas, and tour guides in tourist zones expect tips more than equivalent businesses in non-tourist areas."
+  - question: "How much should I tip a taxi driver in Indonesia?"
+    answer: "Tipping taxi drivers is not expected. If you want to tip, round up the fare (e.g., Rp85,000 fare becomes Rp90,000 or Rp100,000). For ride-hailing apps like Grab, the in-app tip feature allows Rp5,000-10,000 for exceptional service."
 ---
 
 

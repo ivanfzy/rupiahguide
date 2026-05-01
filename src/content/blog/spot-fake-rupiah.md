@@ -1,6 +1,6 @@
 ---
-title: "Identifying Counterfeit Rupiah"
-excerpt: "Security elements in genuine Indonesian banknotes for authenticity verification. Physical characteristics and detection methods for counterfeit currency."
+title: "How to Spot Fake Rupiah Banknotes"
+excerpt: "Security features on genuine Indonesian banknotes — watermarks, security threads, and color-shifting ink. What to check when you receive cash."
 date: "2026-02-01"
 category: "foundation"
 order: 3

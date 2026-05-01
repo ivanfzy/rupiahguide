@@ -1,6 +1,6 @@
 ---
-title: "Indonesian Currency Basics: Essential Knowledge for New Visitors"
-excerpt: "Foundational understanding of Indonesian rupiah for first-time visitors. Denomination values, usage contexts, and practical handling guidelines."
+title: "Indonesian Currency Denominations: A Complete IDR Guide"
+excerpt: "Guide to Indonesian rupiah denominations — from Rp1,000 to Rp100,000 notes. Learn what each bill is worth in USD, when to use each denomination, and how to handle ATMs."
 date: "2026-02-22"
 category: "foundation"
 order: 4

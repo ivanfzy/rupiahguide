@@ -1,6 +1,6 @@
 ---
-title: "Cash Safety Methods in Indonesia"
-excerpt: "Storage protocols for cash in hotels and accommodations while traveling. Zonal distribution methods and security considerations for physical currency."
+title: "How to Keep Your Cash Safe While Traveling in Indonesia"
+excerpt: "A 3-zone cash storage method for travelers — how much to carry, where to keep it, and how to avoid carrying too much at once."
 date: "2026-02-01"
 category: "atm-cash"
 order: 2

@@ -1,6 +1,6 @@
 ---
-title: "Daily Cash Amounts for Travel in Indonesia"
-excerpt: "Recommended cash quantities for daily activities by travel style. Denomination requirements and withdrawal timing considerations."
+title: "How Much Cash to Carry Per Day in Indonesia"
+excerpt: "How much cash to carry daily in Indonesia — Rp300,000 for budget travelers, Rp700,000 for mid-range. Denomination mix and withdrawal timing."
 date: "2026-02-01"
 category: "budget-planning"
 order: 2

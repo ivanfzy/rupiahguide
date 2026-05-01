@@ -1,6 +1,6 @@
 ---
-title: "Small Denomination Usage in Indonesia"
-excerpt: "Applications for low-value rupiah notes in daily transactions. Exact payment scenarios and small-scale financial exchanges."
+title: "Small Change in Indonesia: Why Low-Denomination Notes Matter"
+excerpt: "Why Rp1,000–10,000 notes are more useful than you think — parking, temple donations, exact payment, and tips. How much small change to carry."
 date: "2026-02-01"
 category: "daily-transactions"
 order: 2
