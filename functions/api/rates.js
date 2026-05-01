@@ -3,7 +3,23 @@
 /**
  * Cloudflare Pages Function to fetch currency rates securely.
  * This hides the API Key from the client browser.
+ * CDN source: @fawazahmed0/currency-api (migrated to fawazahmed0/exchange-api)
+ * Fallback: Cloudflare Pages mirror per migration guide recommendation
  */
+
+const CDN_BASE = 'https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1';
+const CF_FALLBACK = 'https://latest.currency-api.pages.dev/v1';
+
+const fetchJSON = async (url) => {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) return null;
+    return await response.json();
+  } catch {
+    return null;
+  }
+};
+
 export async function onRequest(context) {
   const { request, env } = context;
   const url = new URL(request.url);
@@ -25,40 +41,35 @@ export async function onRequest(context) {
   try {
     // 1. Try Gemini API first (if Key exists)
     if (env.GEMINI_API_KEY) {
-      // Note: We use the REST API endpoint manually here to avoid installing node modules in CF Workers if possible,
-      // or we can stick to the Open API fallback which is robust and free.
-      // For simplicity and speed in this demo, let's use the robust Open API as the primary backend source
-      // but protected behind this proxy so clients don't know where it comes from.
+      // Placeholder for future Gemini API integration on server-side
     }
 
-    // 2. Primary Source: Open Exchange Rates (Free via jsdelivr/fawazahmed0)
-    // This is very reliable, free, and updated daily.
+    // 2. Primary Source: currency-api via jsdelivr CDN, with Cloudflare Pages fallback
+    // The original repo has migrated to fawazahmed0/exchange-api
     
     if (mode === "popular") {
-      // Fetch all rates relative to IDR
-      // Strategy: Fetch IDR base. 1 IDR = 0.00006 USD. 
-      // Invert to get: 1 USD = 1/0.00006 IDR.
-      const response = await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/idr.json`);
-      
-      if (!response.ok) throw new Error("Failed to fetch rates");
-      
-      const data = await response.json();
-      const rates = data.idr;
+      // Try primary CDN, then fallback
+      let data = await fetchJSON(`${CDN_BASE}/currencies/idr.json`);
+      if (!data) {
+        data = await fetchJSON(`${CF_FALLBACK}/currencies/idr.json`);
+      }
+      if (!data?.idr) throw new Error("Failed to fetch rates from both CDN and fallback");
       
       return new Response(JSON.stringify({ 
         success: true, 
         source: "cloudflare-proxy", 
-        data: rates 
+        data: data.idr 
       }), { headers: corsHeaders });
 
     } else {
       // Single currency mode
       const code = currency.toLowerCase();
-      const response = await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${code}.json`);
+      let data = await fetchJSON(`${CDN_BASE}/currencies/${code}.json`);
+      if (!data) {
+        data = await fetchJSON(`${CF_FALLBACK}/currencies/${code}.json`);
+      }
+      if (!data?.[code]) throw new Error("Failed to fetch rate from both CDN and fallback");
       
-      if (!response.ok) throw new Error("Failed to fetch rate");
-      
-      const data = await response.json();
       const rate = data[code]?.idr;
 
       return new Response(JSON.stringify({ 

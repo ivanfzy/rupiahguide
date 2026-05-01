@@ -105,31 +105,41 @@ export const FALLBACK_RATES: Record<string, number> = {
 };
 
 // Modified to use Cloudflare Function Proxy in production
+// CDN source: @fawazahmed0/currency-api (migrated to fawazahmed0/exchange-api)
+// Fallback: Cloudflare Pages mirror per migration guide recommendation
+
+const CURRENCY_API_BASE = 'https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1';
+const CURRENCY_API_FALLBACK = 'https://latest.currency-api.pages.dev/v1';
+
+const fetchJSON = async (url: string): Promise<any | null> => {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) return null;
+    return await response.json();
+  } catch {
+    return null;
+  }
+};
+
 const fetchOpenAPIRate = async (currencyCode: string): Promise<number | null> => {
   try {
     // In production (Cloudflare Pages), use the internal API proxy
     // In dev (localhost), we can still use the direct URL or the proxy if `wrangler pages dev` is running
     const isProd = import.meta.env.PROD; 
     
-    let url;
     if (isProd) {
-      url = `/api/rates?currency=${currencyCode}&mode=single`;
+      const url = `/api/rates?currency=${currencyCode}&mode=single`;
+      const data = await fetchJSON(url);
+      return data?.rate || null;
     } else {
-      // Direct fallback for local dev without wrangler
       const code = currencyCode.toLowerCase();
-      url = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${code}.json`;
-    }
-
-    const response = await fetch(url);
-    if (!response.ok) return null;
-    
-    const data = await response.json();
-    
-    if (isProd) {
-       return data.rate || null;
-    } else {
-       const code = currencyCode.toLowerCase();
-       return data[code]?.idr || null;
+      // Try primary CDN, then Cloudflare fallback
+      let data = await fetchJSON(`${CURRENCY_API_BASE}/currencies/${code}.json`);
+      if (!data) {
+        data = await fetchJSON(`${CURRENCY_API_FALLBACK}/currencies/${code}.json`);
+      }
+      if (!data) return null;
+      return data[code]?.idr || null;
     }
 
   } catch (err) {
@@ -143,42 +153,40 @@ const fetchAllOpenAPIRates = async (): Promise<RateMap | null> => {
   try {
     const isProd = import.meta.env.PROD;
     
-    let url;
     if (isProd) {
-      url = `/api/rates?mode=popular`;
+      const url = `/api/rates?mode=popular`;
+      const data = await fetchJSON(url);
+      if (!data?.data) return null;
+      const rates = data.data;
+      return extractRates(rates);
     } else {
-      url = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/idr.json`;
-    }
-
-    const response = await fetch(url);
-    if (!response.ok) return null;
-    
-    const data = await response.json();
-    let rates;
-
-    if (isProd) {
-      rates = data.data;
-    } else {
-      rates = data.idr;
-    }
-    
-    if (!rates) return null;
-
-    const result: RateMap = {};
-    const targets = ALL_AVAILABLE_CURRENCIES.map(c => c.code);
-    
-    targets.forEach(code => {
-      const codeLower = code.toLowerCase();
-      if (rates[codeLower]) {
-        result[code] = Math.round(1 / rates[codeLower]); 
+      // Try primary CDN, then Cloudflare fallback
+      let data = await fetchJSON(`${CURRENCY_API_BASE}/currencies/idr.json`);
+      if (!data) {
+        data = await fetchJSON(`${CURRENCY_API_FALLBACK}/currencies/idr.json`);
       }
-    });
-
-    return result;
+      if (!data?.idr) return null;
+      return extractRates(data.idr);
+    }
   } catch (err) {
     console.warn("Failed to fetch popular rates:", err);
     return null;
   }
+};
+
+// Extract rates from API response into RateMap
+const extractRates = (rates: Record<string, number>): RateMap => {
+  const result: RateMap = {};
+  const targets = ALL_AVAILABLE_CURRENCIES.map(c => c.code);
+  
+  targets.forEach(code => {
+    const codeLower = code.toLowerCase();
+    if (rates[codeLower]) {
+      result[code] = Math.round(1 / rates[codeLower]); 
+    }
+  });
+
+  return result;
 };
 
 export const fetchLiveRate = async (currencyCode: string, forceRefresh = false): Promise<ConversionData> => {
@@ -260,11 +268,11 @@ export const fetchLiveRate = async (currencyCode: string, forceRefresh = false):
   // 2. Try Open API Fallback
   const openRate = await fetchOpenAPIRate(currencyCode);
   if (openRate) {
-    setCachedRate(currencyCode, openRate, ['https://github.com/fawazahmed0/currency-api']);
+    setCachedRate(currencyCode, openRate, ['https://github.com/fawazahmed0/exchange-api']);
     return {
       rate: openRate,
       lastUpdated: 'Open API',
-      sources: ['https://github.com/fawazahmed0/currency-api']
+      sources: ['https://github.com/fawazahmed0/exchange-api']
     };
   }
 
