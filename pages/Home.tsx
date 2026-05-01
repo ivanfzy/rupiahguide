@@ -294,7 +294,7 @@ function Home() {
                  </div>
                 <div className="flex items-center gap-2">
                   <span>{t.lastUpdated} {conversionData.lastUpdated}</span>
-                  {conversionData.sources.length > 0 && (
+                  {conversionData.sources.length > 0 && conversionData.sources[0].startsWith('http') && (
                     <a href={conversionData.sources[0]} target="_blank" rel="noreferrer" className="hover:text-orange-500 flex items-center gap-1 transition-colors ml-2">
                       <Icons.Search />
                       <span className="hidden sm:inline">{t.verified}</span>

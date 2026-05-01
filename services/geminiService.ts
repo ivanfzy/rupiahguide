@@ -10,6 +10,7 @@ import { ConversionData, RateMap, GroundingSource } from "../types";
 import { ALL_AVAILABLE_CURRENCIES } from "../constants";
 
 let ai: GoogleGenAI | null = null;
+let apiKeyInvalid = false; // Track if the API key has been rejected
 
 // Cache configuration
 const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes in milliseconds
@@ -54,6 +55,7 @@ const setCachedRate = (currencyCode: string, rate: number, sources: string[]) =>
 
 const initAI = () => {
   if (ai) return ai;
+  if (apiKeyInvalid) return null; // Don't retry with a known-bad key
   
   const key = process.env.API_KEY || '';
   // Check if key is valid (not empty and not the string "undefined" from some build tools)
@@ -240,19 +242,29 @@ export const fetchLiveRate = async (currencyCode: string, forceRefresh = false):
           sources: sources
         };
       }
-    } catch (error) {
-      console.warn("Gemini API failed, trying fallback...", error);
+    } catch (error: any) {
+      // Detect invalid API key and disable further retries
+      const errorMsg = error?.message || String(error);
+      if (errorMsg.includes('API_KEY_INVALID') || errorMsg.includes('API key not valid')) {
+        apiKeyInvalid = true;
+        ai = null; // Clear the instance so initAI won't return it
+      }
+      // Only warn once to reduce console noise
+      if (typeof window !== 'undefined' && !window._geminiWarned) {
+        console.warn("Gemini API failed, using fallback rates.");
+        window._geminiWarned = true;
+      }
     }
   }
 
   // 2. Try Open API Fallback
   const openRate = await fetchOpenAPIRate(currencyCode);
   if (openRate) {
-    setCachedRate(currencyCode, openRate, ['currency-api']);
+    setCachedRate(currencyCode, openRate, ['https://github.com/fawazahmed0/currency-api']);
     return {
       rate: openRate,
       lastUpdated: 'Open API',
-      sources: ['currency-api']
+      sources: ['https://github.com/fawazahmed0/currency-api']
     };
   }
 
@@ -299,8 +311,16 @@ export const fetchPopularRates = async (): Promise<RateMap> => {
       
       const text = response.text;
       if (text) return JSON.parse(text);
-    } catch (e) {
-      console.warn("Gemini API popular rates failed, trying fallback...", e);
+    } catch (e: any) {
+      const errorMsg = e?.message || String(e);
+      if (errorMsg.includes('API_KEY_INVALID') || errorMsg.includes('API key not valid')) {
+        apiKeyInvalid = true;
+        ai = null;
+      }
+      if (typeof window !== 'undefined' && !window._geminiWarned) {
+        console.warn("Gemini API popular rates failed, using fallback rates.");
+        window._geminiWarned = true;
+      }
     }
   }
 

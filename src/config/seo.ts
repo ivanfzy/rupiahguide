@@ -123,6 +123,17 @@ export const createBreadcrumbSchema = (items: { name: string; url: string }[]) =
   })),
 });
 
+// Normalize date strings to ISO 8601 with timezone
+// Schema.org requires full datetime (e.g., "2026-02-01T00:00:00+07:00")
+const toISODate = (date: string | undefined, fallback?: string): string => {
+  const raw = date || fallback;
+  if (!raw) return new Date().toISOString();
+  // If already a full ISO datetime, return as-is
+  if (raw.includes('T')) return raw;
+  // Date-only string (e.g., "2026-02-01") → add midnight WIB (Indonesia timezone)
+  return `${raw}T00:00:00+07:00`;
+};
+
 export const createArticleSchema = ({
   title,
   description,
@@ -145,8 +156,8 @@ export const createArticleSchema = ({
   "headline": title,
   "description": description,
   "url": url,
-  "datePublished": datePublished || new Date().toISOString(),
-  "dateModified": dateModified || datePublished || new Date().toISOString(),
+  "datePublished": toISODate(datePublished),
+  "dateModified": toISODate(dateModified, datePublished),
   "author": {
     "@type": (author === "RupiahGuide") ? "Organization" : "Person",
     "name": author,
