@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { IDR_BANKNOTES, SUPPORTED_CURRENCIES, ALL_AVAILABLE_CURRENCIES, TRANSLATIONS, Icons } from '../../constants';
 import { RateMap } from '../../types';
 import BanknoteControl from '../banknotes/BanknoteControl';
@@ -91,6 +91,27 @@ const RupiahCounter: React.FC<RupiahCounterProps> = ({ popularRates, lastUpdated
     setCounts(initial);
   }, []);
 
+  // --- Dynamic font sizing for IDR input ---
+  const displayValue = useMemo(() => {
+    if (total === 0) return '';
+    return Number(manualInput || '0').toLocaleString('id-ID');
+  }, [total, manualInput]);
+
+  const inputFontSize = useMemo(() => {
+    const text = displayValue || '0';
+    const len = text.length;
+    const baseRem = 2.25;   // md:text-4xl
+    const minRem = 1.125;   // text-lg
+    const maxWidthPx = 280;
+
+    // monospace char width ≈ 0.58 × font-size
+    const estWidth = len * baseRem * 0.58 * 16;
+    if (estWidth <= maxWidthPx) return undefined;
+
+    const scaled = (maxWidthPx * 0.93) / (len * 0.58 * 16);
+    return Math.max(minRem, scaled);
+  }, [displayValue]);
+
   const handleAddCurrency = useCallback((code: string) => {
     if (!activeCurrencies.includes(code)) {
       setActiveCurrencies(prev => [...prev, code]);
@@ -135,10 +156,11 @@ const RupiahCounter: React.FC<RupiahCounterProps> = ({ popularRates, lastUpdated
             <input 
               type="text" 
               inputMode="numeric"
-              value={total === 0 ? '' : Number(manualInput).toLocaleString('id-ID')}
+              value={displayValue}
               onChange={handleManualInputChange}
               placeholder="0"
-              className="text-4xl md:text-5xl font-bold text-stone-800 w-full max-w-[300px] text-center border-b-2 border-stone-300/30 focus:border-orange-500 outline-none bg-transparent placeholder-stone-300/30 font-mono"
+              style={inputFontSize ? { fontSize: `${inputFontSize.toFixed(2)}rem` } : undefined}
+              className="text-3xl md:text-4xl font-bold text-stone-800 w-full max-w-[300px] text-center border-b-2 border-stone-300/30 focus:border-orange-500 outline-none bg-transparent placeholder-stone-300/30 font-mono transition-[font-size] duration-150"
             />
         </div>
         

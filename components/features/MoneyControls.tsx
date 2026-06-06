@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { Currency } from '../../types';
 import { TRANSLATIONS, Icons } from '../../constants';
 
@@ -14,10 +14,31 @@ const MoneyControls: React.FC<MoneyControlsProps> = ({ amount, setAmount, curren
   const t = TRANSLATIONS[language];
   const convertedValue = amount * rate;
 
+  // --- Dynamic display & font sizing ---
+  const displayAmount = useMemo(() => {
+    if (amount === 0) return '';
+    return amount.toLocaleString('en-US');
+  }, [amount]);
+
+  const inputFontSize = useMemo(() => {
+    const text = displayAmount || '0';
+    const len = text.length;
+    const baseRem = 2.25;   // md:text-4xl
+    const minRem = 1.125;   // text-lg
+    const maxWidthPx = 240; // narrower: currency symbol + flag occupy space
+
+    const estWidth = len * baseRem * 0.58 * 16;
+    if (estWidth <= maxWidthPx) return undefined;
+
+    const scaled = (maxWidthPx * 0.93) / (len * 0.58 * 16);
+    return Math.max(minRem, scaled);
+  }, [displayAmount]);
+
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    const val = parseFloat(e.target.value);
+    const raw = e.target.value.replace(/[^0-9.]/g, '');
+    const val = parseFloat(raw);
     if (!isNaN(val) && val >= 0) setAmount(val);
-    else if (e.target.value === '') setAmount(0);
+    else if (raw === '' || raw === '.') setAmount(0);
   }, [setAmount]);
 
   const quickAdd = useCallback((val: number) => {
@@ -39,6 +60,22 @@ const MoneyControls: React.FC<MoneyControlsProps> = ({ amount, setAmount, curren
     }).format(val);
   };
 
+  // --- Dynamic font sizing for result card ---
+  const resultText = useMemo(() => formatIDR(convertedValue), [convertedValue]);
+
+  const resultFontSize = useMemo(() => {
+    const len = resultText.length;
+    const baseRem = 1.875;   // text-3xl
+    const minRem = 1.0;      // text-base
+    const maxWidthPx = 380;
+
+    const estWidth = len * baseRem * 0.58 * 16;
+    if (estWidth <= maxWidthPx) return undefined;
+
+    const scaled = (maxWidthPx * 0.93) / (len * 0.58 * 16);
+    return Math.max(minRem, scaled);
+  }, [resultText]);
+
   return (
     <div className="bg-white rounded-3xl shadow-sm p-6 md:p-8 w-full max-w-xl mx-auto border border-stone-200/50 relative z-10">
       
@@ -48,16 +85,18 @@ const MoneyControls: React.FC<MoneyControlsProps> = ({ amount, setAmount, curren
           {t.youHave}
         </label>
         <div className="relative flex items-center justify-center w-full font-mono">
-            <span className="text-4xl md:text-5xl font-bold text-stone-800 mr-2 flex items-center gap-2">
-              <span className={`${currency.flag} rounded-md shadow-sm text-3xl md:text-4xl`}></span>
+            <span className="text-3xl md:text-4xl font-bold text-stone-800 mr-2 flex items-center gap-2">
+              <span className={`${currency.flag} rounded-md shadow-sm text-2xl md:text-3xl`}></span>
               {currency.symbol}
             </span>
             <input
-              type="number"
-              value={amount === 0 ? '' : amount}
+              type="text"
+              inputMode="decimal"
+              value={displayAmount}
               onChange={handleInputChange}
-              className="w-40 text-4xl md:text-5xl font-bold text-stone-800 bg-transparent border-b-2 border-dashed border-stone-300/50 focus:border-orange-500 outline-none text-center placeholder-stone-300/30 transition-colors font-mono"
               placeholder="0"
+              style={inputFontSize ? { fontSize: `${inputFontSize.toFixed(2)}rem` } : undefined}
+              className="min-w-[6ch] max-w-[300px] text-3xl md:text-4xl font-bold text-stone-800 bg-transparent border-b-2 border-dashed border-stone-300/50 focus:border-orange-500 outline-none text-center placeholder-stone-300/30 transition-[font-size] duration-150 font-mono"
             />
         </div>
         <div className="text-sm text-stone-600 font-medium mt-2">
@@ -89,8 +128,11 @@ const MoneyControls: React.FC<MoneyControlsProps> = ({ amount, setAmount, curren
         <label className="text-xs font-medium text-white/60 mb-1 block">
           {t.approx}
         </label>
-        <div className="text-3xl md:text-4xl font-bold truncate font-mono">
-          {formatIDR(convertedValue)}
+        <div
+          style={resultFontSize ? { fontSize: `${resultFontSize.toFixed(2)}rem` } : undefined}
+          className="text-2xl md:text-3xl font-bold font-mono transition-[font-size] duration-150"
+        >
+          {resultText}
         </div>
         <div className="mt-2 text-white/70 text-xs font-medium bg-stone-800/20 inline-block px-3 py-1 rounded-full font-mono">
           1 {currency.code} ≈ {formatIDR(rate)}

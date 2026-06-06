@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect, useMemo } from 'react';
 import { BanknoteConfig } from '../../types';
 import { Icons } from '../../constants';
 import BanknoteVisual from './BanknoteVisual';
@@ -33,6 +33,22 @@ const Banknote: React.FC<BanknoteProps> = ({ config, count, onClick }) => {
   // Reduced visual stack limit from 5 to 3
   const displayCount = Math.min(count, 3); 
   const stack = Array.from({ length: displayCount });
+
+  // --- Dynamic font sizing for count badge ---
+  const countText = `${count}x`;
+  const countFontSize = useMemo(() => {
+    const len = countText.length;
+    if (len <= 3) return undefined;                // "3x", "14x" — full size
+    const baseRem = 0.875;                          // text-sm
+    const minRem = 0.625;                           // ~10px
+    const maxWidthPx = 64;
+
+    const estWidth = len * baseRem * 0.58 * 16;
+    if (estWidth <= maxWidthPx) return undefined;
+
+    const scaled = (maxWidthPx * 0.93) / (len * 0.58 * 16);
+    return Math.max(minRem, scaled);
+  }, [countText]);
 
   const handleClick = useCallback((e: React.MouseEvent) => {
     if (onClick) {
@@ -81,10 +97,13 @@ const Banknote: React.FC<BanknoteProps> = ({ config, count, onClick }) => {
         {/* Count Badge if multiple */}
         {count > 1 && (
           <div 
-            className="absolute -top-4 -right-4 bg-stone-800 text-amber-50 font-bold text-sm w-8 h-8 flex items-center justify-center rounded-full shadow-lg z-20 border-2 border-white"
-            style={{ transform: `translate(${displayCount * 6}px, ${displayCount * -6}px)`}}
+            className="absolute -top-4 -right-4 bg-stone-800 text-amber-50 font-bold text-sm h-8 min-w-[2rem] px-2 flex items-center justify-center rounded-full shadow-lg z-20 border-2 border-white transition-[font-size] duration-150"
+            style={{ 
+              transform: `translate(${displayCount * 6}px, ${displayCount * -6}px)`,
+              ...(countFontSize ? { fontSize: `${countFontSize.toFixed(2)}rem` } : {})
+            }}
           >
-            {count}x
+            {countText}
           </div>
         )}
       </div>
