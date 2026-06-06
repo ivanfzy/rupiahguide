@@ -77,32 +77,32 @@ const initAI = () => {
   }
 };
 
-// Hardcoded fallback as a last resort (last updated: May 2026)
+// Hardcoded fallback as a last resort (last updated: June 2026)
 // These are approximate mid-rates and should be refreshed periodically
 export const FALLBACK_RATES: Record<string, number> = {
-  'USD': 17300,
-  'EUR': 20300,
-  'AUD': 12400,
-  'SGD': 13600,
-  'JPY': 108,
-  'GBP': 23400,
-  'MYR': 4400,
-  'CNY': 2500,
+  'USD': 18039,
+  'EUR': 20952,
+  'AUD': 12852,
+  'SGD': 14036,
+  'JPY': 113,
+  'GBP': 24223,
+  'MYR': 4469,
+  'CNY': 2663,
   'KRW': 12,
-  'THB': 530,
-  'SAR': 4600,
-  'HKD': 2200,
-  'TWD': 550,
-  'INR': 183,
-  'PHP': 282,
-  'VND': 0.66,
-  'NZD': 10100,
-  'CAD': 12700,
-  'CHF': 22000,
-  'AED': 4700,
-  'BRL': 3500,
-  'TRY': 385,
-  'RUB': 233
+  'THB': 552,
+  'SAR': 4810,
+  'HKD': 2303,
+  'TWD': 572,
+  'INR': 189,
+  'PHP': 293,
+  'VND': 0.69,
+  'NZD': 10576,
+  'CAD': 12974,
+  'CHF': 22857,
+  'AED': 4912,
+  'BRL': 3562,
+  'TRY': 392,
+  'RUB': 246
 };
 
 // Modified to use Cloudflare Function Proxy in production
